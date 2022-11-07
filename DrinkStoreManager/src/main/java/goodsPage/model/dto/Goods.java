@@ -39,6 +39,26 @@ public class Goods {
 		return goods_stock;
 	}
 
+	public void setGoods_code(String goods_code) {
+		this.goods_code = goods_code;
+	}
+
+	public void setGoods_name(String goods_name) {
+		this.goods_name = goods_name;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+
+	public void setGoods_price(String goods_price) {
+		this.goods_price = goods_price;
+	}
+
+	public void setGoods_stock(String goods_stock) {
+		this.goods_stock = goods_stock;
+	}
+
 	@Override
 	public String toString() {
 		return "Goods [goods_code=" + goods_code + ", goods_name=" + goods_name + ", kind=" + kind + ", goods_price="

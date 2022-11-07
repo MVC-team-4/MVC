@@ -1,12 +1,38 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>  
+<%@ page import="java.sql.*"%>  
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="goodsPage.model.dto.Goods"%>  
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>ìƒí’ˆ ì¡°íšŒ</title>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
 </head>
+<%
+	ArrayList<Goods> list =(ArrayList<Goods>)request.getAttribute("list");
+%>
 <body>
-
+		<table>
+			<tr>
+				<td>¹°Ç°ÄÚµå</td>
+				<td>¹°Ç°ÀÌ¸§</td>
+				<td>Á¾·ù</td>
+				<td>°¡°İ</td>
+				<td>¼ö·®</td>
+				<td>¼öÁ¤/»èÁ¦</td>
+			</tr>
+			<% for( Goods goods : list){ %>
+			<tr>
+				<td><%= goods.getGoods_code() %></td>
+				<td><%= goods.getGoods_name() %></td>
+				<td><%= goods.getKind() %></td>
+				<td><%= goods.getGoods_price() %></td>
+				<td><%= goods.getGoods_stock() %></td>
+				
+				<td><a href="goods-update.do?update_code=<%= goods.getGoods_code() %>">¼öÁ¤</a></td>
+			</tr>
+			<%	}%>	
+		</table>
 </body>
 </html>

@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import goodsPage.model.dao.GoodsDao;
 import goodsPage.model.service.GoodsService;
-import oracle.sql.ARRAY;
 
 @WebServlet("/goods-reg.do")
 public class GoodsRegServlet extends HttpServlet {

@@ -5,7 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 등록</title>
-<link rel="stylesheet" href="css/goods.css">
+<%
+String path =  request.getContextPath();   
+//현재 프로젝트의 이름 얻어옴 , 프로젝트1개 => 한 개의 웹사이트 
+%>
+
+<link href="<%=path%>/css/goods.css" rel="stylesheet">
 </head>
 <body>
 
