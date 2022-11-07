@@ -53,7 +53,7 @@ public class GoodsDao {
 	}//
 	
 	
-	//테이블 조회
+	//상품 테이블 조회
 	public ArrayList<Goods> selectGoods(){
 		ArrayList<Goods> list = new ArrayList<>();
 		dbCon();
@@ -125,11 +125,9 @@ public class GoodsDao {
 		return g;		
 	}//
 	
-	//상품 수정
+	//상품 데이터 수정
 	public void updateGoods(Goods updateGoods){
-
 		dbCon();
-
 		String sql ="UPDATE goods_list SET goods_name = ?, kind = ?, goods_price = ?, goods_stock = ? WHERE goods_code = ?" ;
 		try {
 			PreparedStatement pst  = con.prepareStatement(sql);
@@ -138,17 +136,29 @@ public class GoodsDao {
 			pst.setString(3, updateGoods.getGoods_price());
 			pst.setString(4, updateGoods.getGoods_stock());
 			pst.setString(5, updateGoods.getGoods_code());
-			ResultSet rs = pst.executeQuery();
+			pst.executeUpdate();
 
-			rs.close();
 			pst.close();
 			con.close();
-
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-
+	}//
+	
+	//상품 데이터 삭제
+	public void deleteGoods(String delete_code) {
+		dbCon();
+		String sql = "DELETE FROM goods_list WHERE goods_code=? ";
+		try {
+			PreparedStatement pst = con.prepareStatement(sql);
+			pst.setString(1, delete_code);
+			pst.executeUpdate();
+			
+			pst.close();
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	//콘솔 테스트

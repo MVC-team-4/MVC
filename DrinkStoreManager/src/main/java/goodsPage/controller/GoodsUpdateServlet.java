@@ -23,7 +23,7 @@ public class GoodsUpdateServlet extends HttpServlet {
 		String update_code = request.getParameter("update_code");
 
 		GoodsService service = new GoodsService(new GoodsDao());
-		Goods goods = service.goodsSelectOne(update_code);
+		Goods goods = service.selectOneGoods(update_code);
 		
 		request.setAttribute("goods", goods);
 		//상품 수정 화면으로 이동
@@ -45,7 +45,7 @@ public class GoodsUpdateServlet extends HttpServlet {
 
 		//수정 서비스
 		GoodsService service = new GoodsService(new GoodsDao());
-		service.goodsUpdate(goods);
+		service.updateGoods(goods);
 
 		//조회 서블릿으로 요청
 		response.sendRedirect("/DrinkStoreManager/goods-list.do");

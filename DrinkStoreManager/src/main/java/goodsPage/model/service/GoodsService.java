@@ -25,13 +25,18 @@ public class GoodsService {
 	}
 	
 	//상품 하나 조회 서비스
-	public Goods goodsSelectOne (String update_code){
+	public Goods selectOneGoods (String update_code){
 		return dao.selectOneGoods(update_code);
 	}
 	
 	//상품 수정 서비스
-	public void goodsUpdate (Goods updateGoods){
+	public void updateGoods (Goods updateGoods){
 		dao.updateGoods(updateGoods);
+	}
+	
+	//상품 삭제 서비스
+	public void deleteGoods(String delete_code) {
+		dao.deleteGoods(delete_code);
 	}
 	
 	//콘솔 테스트
