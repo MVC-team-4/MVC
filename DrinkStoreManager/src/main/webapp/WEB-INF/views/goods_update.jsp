@@ -6,6 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 수정</title>
+<%
+String path =  request.getContextPath();   
+//현재 프로젝트의 이름 얻어옴
+%>
+
+<link href="<%=path%>/css/goods.css" rel="stylesheet">
 </head>
 <body>
 <%
@@ -13,7 +19,7 @@
 %>
 <body>
     <form action="goods-update.do" method ="post">
-        <h3>상품 등록</h3>
+        <h3>상품 수정</h3>
           <table>
             <tr>
               <td>
@@ -45,6 +51,14 @@
               </td>
               <td>
                 <input type="text" name="goods_price" value="<%= goods.getGoods_price() %>">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                상품재고
+              </td>
+              <td>
+                <input type="text" name="goods_stock" value="<%= goods.getGoods_stock() %>">
               </td>
             </tr>
             <tr>

@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>상품 조회</title>
 </head>
 <%
 	ArrayList<Goods> list =(ArrayList<Goods>)request.getAttribute("list");
@@ -30,7 +30,10 @@
 				<td><%= goods.getGoods_price() %></td>
 				<td><%= goods.getGoods_stock() %></td>
 				
-				<td><a href="goods-update.do?update_code=<%= goods.getGoods_code() %>">수정</a></td>
+				<td>
+				  <a href="goods-update.do?update_code=<%= goods.getGoods_code() %>">수정</a> / 
+				  <a href="goods-delete.do?delete_code=<%= goods.getGoods_code() %>">삭제</a>
+				</td>
 			</tr>
 			<%	}%>	
 		</table>
