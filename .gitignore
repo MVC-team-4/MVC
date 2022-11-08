@@ -1,5 +1,7 @@
 /.metadata/
 Servers/
+.classpath
+.project
 
 ### Eclipse ###
 .metadata
