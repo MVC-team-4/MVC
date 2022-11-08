@@ -15,8 +15,8 @@ public class GoodsService {
 	}
 	
 	//상품 등록 서비스
-	public void regGoods(String[] goodsdata) {
-		dao.insertGoods(goodsdata);
+	public void regGoods(Goods goods) {
+		dao.insertGoods(goods);
 	}
 	
 	//상품 전체 조회 서비스
@@ -42,7 +42,7 @@ public class GoodsService {
 	//콘솔 테스트
 	public static void main(String[] args) {
 		GoodsService service = new GoodsService(new GoodsDao());
-		String[] goodsdata = {"0001","블랑","맥주","3500"};
+		Goods goodsdata = new Goods("0001","블랑","맥주","3500","9999");
 		service.regGoods(goodsdata);
 	}
 

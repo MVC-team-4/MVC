@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import goodsPage.model.dao.GoodsDao;
+import goodsPage.model.dto.Goods;
 import goodsPage.model.service.GoodsService;
 
 @WebServlet("/goods-reg.do")
@@ -25,17 +26,19 @@ public class GoodsRegServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//form 데이터
 		request.setCharacterEncoding("UTF-8");
-		String[] goodsdata = new String[4];
-		goodsdata[0] = request.getParameter("goods_code");
-		goodsdata[1] = request.getParameter("goods_name");
-		goodsdata[2] = request.getParameter("kind");
-		goodsdata[3] = request.getParameter("goods_price");
+		
+		Goods goods = new Goods();
+		goods.setGoods_code(request.getParameter("goods_code"));
+		goods.setGoods_name(request.getParameter("goods_name"));
+		goods.setKind(request.getParameter("kind"));
+		goods.setGoods_price(request.getParameter("goods_price"));
+		
 		//테스트
-		System.out.println(Arrays.toString(goodsdata));
+		System.out.println(goods);
 		
 		//등록 서비스
 		GoodsService service = new GoodsService(new GoodsDao());
-		service.regGoods(goodsdata);
+		service.regGoods(goods);
 		
 		//조회 서블릿으로 요청
 		response.sendRedirect("/DrinkStoreManager/goods-list.do");

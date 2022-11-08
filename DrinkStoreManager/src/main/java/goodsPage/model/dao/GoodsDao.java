@@ -34,15 +34,17 @@ public class GoodsDao {
 	}//
 	
 	//테이블에 상품 등록
-	public void insertGoods(String[] goodsdata) {
+	public void insertGoods(Goods goods) {
 		//디비 연결
 		dbCon();
 		String sql = "INSERT INTO goods_list VALUES(?,?,?,?,9999)";
 		try {
 			PreparedStatement pst = con.prepareStatement(sql);
-			for (int i = 0; i < goodsdata.length; i++) {
-				pst.setString(i+1, goodsdata[i]);
-			}
+			pst.setString(1, goods.getGoods_code());
+			pst.setString(2, goods.getGoods_name());
+			pst.setString(3, goods.getKind());
+			pst.setString(4, goods.getGoods_price());
+			
 			pst.executeUpdate();
 
 			pst.close();
