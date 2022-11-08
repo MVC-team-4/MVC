@@ -11,15 +11,16 @@ String path =  request.getContextPath();
 //현재 프로젝트의 이름 얻어옴
 %>
 
-<link href="<%=path%>/css/goods.css" rel="stylesheet">
+<link href="<%=path%>/css/goods_update.css" rel="stylesheet">
 </head>
 <body>
 <%
 	Goods goods =(Goods)request.getAttribute("goods");
 %>
 <body>
-    <form action="goods-update.do" method ="post">
-        <h3>상품 수정</h3>
+	<section>
+	    <form action="goods-update.do" method ="post">
+	        <h3>상품 수정</h3>
           <table>
             <tr>
               <td>
@@ -68,8 +69,7 @@ String path =  request.getContextPath();
               </td>
             </tr>
           </table>
-        
         </form>
-
+	</section>
 </body>
 </html>

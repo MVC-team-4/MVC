@@ -1,41 +1,51 @@
+<%@page import="java.io.Console"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>  
+    pageEncoding="UTF-8"%>  
 <%@ page import="java.sql.*"%>  
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="goodsPage.model.dto.Goods"%>  
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>»óÇ° Á¶È¸</title>
+	<% String path = request.getContextPath(); %>
+	<link href="<%=path %>/css/goods_list.css" rel= "stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<title>ìƒí’ˆ ì¡°íšŒ</title>
 </head>
 <%
 	ArrayList<Goods> list =(ArrayList<Goods>)request.getAttribute("list");
 %>
 <body>
-		<table>
-			<tr>
-				<td>¹°Ç°ÄÚµå</td>
-				<td>¹°Ç°ÀÌ¸§</td>
-				<td>Á¾·ù</td>
-				<td>°¡°Ý</td>
-				<td>¼ö·®</td>
-				<td>¼öÁ¤/»èÁ¦</td>
-			</tr>
-			<% for( Goods goods : list){ %>
-			<tr>
-				<td><%= goods.getGoods_code() %></td>
-				<td><%= goods.getGoods_name() %></td>
-				<td><%= goods.getKind() %></td>
-				<td><%= goods.getGoods_price() %></td>
-				<td><%= goods.getGoods_stock() %></td>
-				
-				<td>
-				  <a href="goods-update.do?update_code=<%= goods.getGoods_code() %>">¼öÁ¤</a> / 
-				  <a href="goods-delete.do?delete_code=<%= goods.getGoods_code() %>">»èÁ¦</a>
-				</td>
-			</tr>
-			<%	}%>	
-		</table>
+	<section>
+		<div id="title_wrap">
+			<div>ëª©ë¡(ì´ <span><%= list.size() %></span>ê°œ)</div>
+		</div>
+		<div id="table_wrap">
+			<table>
+				<tr>
+					<th>ë¬¼í’ˆì½”ë“œ</th>
+					<th>ë¬¼í’ˆì´ë¦„</th>
+					<th>ì¢…ë¥˜</th>
+					<th>ê°€ê²©</th>
+					<th>ìˆ˜ëŸ‰</th>
+					<th>ìˆ˜ì • / ì‚­ì œ</th>
+				</tr>
+				<% for( Goods goods : list){ %>
+				<tr>
+					<td><%= goods.getGoods_code() %></td>
+					<td><%= goods.getGoods_name() %></td>
+					<td><%= goods.getKind() %></td>
+					<td><%= goods.getGoods_price() %></td>
+					<td><%= goods.getGoods_stock() %></td>
+					
+					<td>
+					  <a href="goods-update.do?update_code=<%= goods.getGoods_code() %>">ìˆ˜ì •</a> / 
+					  <a href="goods-delete.do?delete_code=<%= goods.getGoods_code() %>">ì‚­ì œ</a>
+					</td>
+				</tr>
+				<%	}%>	
+			</table>
+		</div>
+	</section>
 </body>
 </html>
