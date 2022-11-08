@@ -29,28 +29,32 @@ ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 	
 	    	<h2> 고객 정보 조회 </h2>
 	    	
-	        <div class="table">
-				<div class="tbhead">
-				  <div class="tbrow">
-				  	<div class="tbID">ID</div>
-				    <div class="tbNAME">이름</div>
-				    <div class="tbADDRESS">주소</div>
-				    <div class="tbPHONENUM">전화번호</div>
-				   </div>
-				 </div>
-			 
-				 <%for (Customer customer: list){ %>
-				 <div class="tbbody">
-				   <div class="tbrow">
-				    <div class="tbid"><%= customer.getId() %></div>
-				    <div class="tbname"><%= customer.getName() %></div>
-				    <div class="tbaddress"><%= customer.getAddress() %></div>
-				    <div class="tbphonenum"><%= customer.getPhone_num() %></div>
-				    <input type="button" class="btn" value="수정">
-				   </div>
-	        	</div>
-	        	<%} %>
-	    	</div>
+	    	<!--table-->
+		    <div class="table">
+		        <!--thead-->
+		        <div class="thead">
+		            <!-- tr-->
+		            <div class="tr">
+		                <div class="tbID">ID</div>
+		                <div class="tbNAME">이름</div>
+		                <div class="tbADDRESS">주소</div>
+		                <div class="tbPHONENUM">전화번호</div>
+		            </div>
+		        </div>        
+		        <!--tbody-->
+		        <% for (Customer customer: list){ %>
+		        <div class="tbody">
+		            <!-- tr-->
+		            <div class="tr_body">
+		                <div class="tbid"><%= customer.getId() %></div>
+		                <div class="tbname"><%= customer.getName() %></div>
+		                <div class="tbaddress"><%= customer.getAddress() %></div>
+		                <div class="tbphonenum"><%= customer.getPhone_num() %></div>
+		           		<input type="button" class="btn" value="수정">
+		            </div>
+		        </div>
+		        <%} %>
+		    </div>
 	    
 	    </div>
     
