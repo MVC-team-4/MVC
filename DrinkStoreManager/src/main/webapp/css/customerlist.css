@@ -23,9 +23,10 @@ h2{
     border: 3px solid #000000;
     text-align: left;
     border-collapse: collapse;
+    position: relative;
 }
-.tbID, .tbNAME, .tbADDRESS, .tbPHONENUM{
-	font-size : 20px;
+.tbID, .tbNAME, .tbADDRESS {
+	font-size : 28px;
 	border: 1px solid #000000;
 	text-align: center;
 	font-weight: bold;
@@ -34,17 +35,36 @@ h2{
 	height: 40px;
 	border-collapse: collapse;
 }
-.tbhead, .tbid, .tbname, .tbaddress, .tbphonenum{
+.tbPHONENUM{
+	font-size : 28px;
+	border: 1px solid #000000;
+	text-align: center;
+	font-weight: bold;
+	background: #CFCFCF;
+	width: 292px;
+	height: 40px;
+	border-collapse: collapse;
+}
+.tbhead, .tbid, .tbname, .tbaddress {
 	border: 1px solid #000000;
 	width: 200px;
 	height: 40px;
-	text-align: left;
 	border-collapse: collapse;
+	font-size : 20px;
+}
+.tbphonenum{
+	border: 1px solid #000000;
+	width: 242px;
+	height: 40px;
+	border-collapse: collapse;
+	font-size : 20px;
 }
 .btn{
+	position: absolute;
+	right: 0px;
 	border: 1px solid #000000;
 	width: 50px;
-	height: 40px;
+	height: 42px;
 	text-align: center;
 }
 .tr{
