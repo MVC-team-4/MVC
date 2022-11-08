@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+.wrap{
+    padding : 20px;
+    margin:0 auto;
+    border:1px solid black;
+    width: 880px;
+}
+h2{
+    text-align: center;
+    margin: 0 auto;
+    color: blueviolet;
+    margin-bottom: 20px;
+}
+.table{
+    width: 600px;
+    margin: 0 auto;
+    border: 3px solid #000000;
+    text-align: left;
+    border-collapse: collapse;
+}
+.tbID, .tbNAME, .tbADDRESS, .tbPHONENUM{
+	font-size : 20px;
+	border: 1px solid #000000;
+	text-align: center;
+	font-weight: bold;
+	background: #CFCFCF;
+	width: 150px;
+	height: 30px;
+	border-collapse: collapse
+}
+.tbhead, .tbid, .tbname, .tbaddress, .tbphonenum, .btn{
+	border: 1px solid #000000;
+	padding: 5px 4px;
+	width: 150px;
+	height: 30px;
+	text-align: left;
+}
+
+/*
+.divTable.minimalistBlack .divTableCell, .divTable.minimalistBlack .divTableHead {
+  border: 1px solid #000000;
+  padding: 5px 4px;
+}
+.divTable.minimalistBlack .divTableBody .divTableCell {
+  font-size: 13px;
+}
+.divTable.minimalistBlack .divTableHeading {
+  background: #CFCFCF;
+  background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+  border-bottom: 3px solid #000000;
+}
+.divTable.minimalistBlack .divTableHeading .divTableHead {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  text-align: left;
+}
+.minimalistBlack .tableFootStyle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  border-top: 3px solid #000000;
+}
+.minimalistBlack .tableFootStyle {
+  font-size: 14px;
+}
+*/
+/* DivTable.com */
+
+.table{ display: table; }
+.tbrow { display: table-row; }
+.tbhead { display: table-header-group;}
+.tbID, .tbNAME, .tbADDRESS, .tbPHONENUM, .tbid, .tbname, .tbaddress, .tbphonenum, .btn { display: table-cell;}
+.tbhead { display: table-header-group;}
+.tbbody { display: table-body-group;}
+
