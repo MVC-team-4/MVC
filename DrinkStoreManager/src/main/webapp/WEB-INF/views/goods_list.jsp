@@ -22,7 +22,12 @@
 		<div id="title_wrap">
 			<div id="title">목록(총 <span><%= list.size() %></span>개)</div>
 			<div id="sort">
-				<button onclick=goods()>상품코드순</button> 
+				<select id="salesTypeList"  onchange="listFunction(this.value)">
+				   <option value="code"  >코드순</option>	
+	               <option value="price" >가격순</option>
+	               <option value="quantity" >수량순</option>	
+
+  				</select>
 			</div>
 		</div>
 		<div id="table_wrap">

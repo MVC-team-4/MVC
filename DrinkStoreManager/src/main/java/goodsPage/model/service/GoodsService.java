@@ -28,9 +28,48 @@ public class GoodsService {
 	}
 	
 	
-	//상품 전체 조회 서비스
-	public String getOrderByCodeJson() {
+	//상품 전체 조회: 가격 정렬
+	public String getOrderByPriceJson() {
 		ArrayList<Goods> list = dao.selectGoodsSortByPrice();
+		
+		JSONArray jArray = new JSONArray();
+		for(Goods goods : list) {
+			JSONObject json = new JSONObject();
+			json.put("kind", goods.getKind());
+			json.put("goods_code", goods.getGoods_code());
+			json.put("goods_name", goods.getGoods_name());
+			json.put("goods_price", goods.getGoods_price());
+			json.put("goods_stock", goods.getGoods_stock());
+			jArray.add(json);
+		}
+		JSONObject goodsData = new JSONObject();
+		goodsData.put("goodsData", jArray);
+		
+		return goodsData.toString();
+	}
+	//상품 전체 조회: 코드 정렬
+		public String getOrderByCodeJson() {
+			ArrayList<Goods> list = dao.selectGoodsSortByCode();
+			
+			JSONArray jArray = new JSONArray();
+			for(Goods goods : list) {
+				JSONObject json = new JSONObject();
+				json.put("kind", goods.getKind());
+				json.put("goods_code", goods.getGoods_code());
+				json.put("goods_name", goods.getGoods_name());
+				json.put("goods_price", goods.getGoods_price());
+				json.put("goods_stock", goods.getGoods_stock());
+				jArray.add(json);
+			}
+			JSONObject goodsData = new JSONObject();
+			goodsData.put("goodsData", jArray);
+			
+			return goodsData.toString();
+		}
+	
+	//상품 전체 조회: 코드 정렬	
+	public String getOrderByStockJson() {
+		ArrayList<Goods> list = dao.selectGoodsSortByStock();
 		
 		JSONArray jArray = new JSONArray();
 		for(Goods goods : list) {
@@ -88,5 +127,7 @@ public class GoodsService {
 		Goods goodsdata = new Goods("0001","블랑","맥주","3500","9999");
 		service.regGoods(goodsdata);
 	}
+
+	
 
 }
