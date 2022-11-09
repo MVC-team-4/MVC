@@ -10,12 +10,11 @@ public class Customer {
 	
 	public Customer() {}
 	
-	public Customer(String id, String name, String address, String phone_num, String grade) {
+	public Customer(String id, String name, String address, String phone_num) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.phone_num = phone_num;
-		this.grade = grade;
 	}
 
 	public String getId() {
