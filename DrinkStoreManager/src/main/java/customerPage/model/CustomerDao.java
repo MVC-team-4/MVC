@@ -16,7 +16,8 @@ public class CustomerDao {
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String url="jdbc:oracle:thin:@localhost:1521:xe";
 	String user="system";
-	String password="oracle";
+	//String password="oracle";
+	String password="1234";
 	Connection con = null;
 
 	//
@@ -47,8 +48,8 @@ public class CustomerDao {
 					String name = rs.getString(2);
 					String address = rs.getString(3);
 					String phone_num = rs.getString(4);
-					String grade = rs.getString(5);
-					Customer customer = new Customer(id, name, address, phone_num,grade);
+					//String grade = rs.getString(5);
+					Customer customer = new Customer(id, name, address, phone_num);
 					list.add(customer);
 				}
 				
@@ -73,7 +74,7 @@ public class CustomerDao {
 			pst.setString(2, customer.getName());
 			pst.setString(3, customer.getAddress());
 			pst.setString(4, customer.getPhone_num());
-			pst.setString(5, customer.getGrade());
+			//pst.setString(5, customer.getGrade());
 			pst.executeUpdate();
 			
 			pst.close();
@@ -100,8 +101,8 @@ public class CustomerDao {
 				String tmpName = rs.getString(2);
 				String tmpAddress = rs.getString(3);
 				String tmpPhone_num = rs.getString(4);
-				String tmpGrade = rs.getString(5);
-				customer = new Customer(tmpId, tmpName, tmpAddress, tmpPhone_num, tmpGrade);
+				//String tmpGrade = rs.getString(5);
+				customer = new Customer(tmpId, tmpName, tmpAddress, tmpPhone_num);
 				
 			}
 			
@@ -114,47 +115,89 @@ public class CustomerDao {
 		return customer;
 	}
 	
-	public int update(Customer customer) {
-		int cnt = 0;
-		
+	public void update(Customer customer) {
 		customercon();
 		String sql = "update customer_info set name=?, address=?, phone_num=? where id=?";
-		
-		
-		
+		try {
+			PreparedStatement pst = con.prepareStatement(sql);
+			pst.setString(1, customer.getName());
+			pst.setString(2, customer.getAddress());
+			pst.setString(3, customer.getPhone_num());
+			pst.setString(4, customer.getId());
+			pst.executeUpdate();
+			
+			pst.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	//회원 등급 포함 조회
+	public ArrayList<Customer> selectGrade(String[] grades) {
+		ArrayList<Customer> list = customers();
+		customercon();
+		String sql = "SELECT o.id, CASE WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'VVIP' WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'VIP' WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'GOLD' ELSE 'SILVER' END AS grade FROM order_list o JOIN sale_list s ON s.order_number=o.order_number JOIN goods_list g ON s.goods_code=g.goods_code JOIN customer_info c ON o.id=c.id GROUP BY o.id";
+		try {
+			PreparedStatement pst = con.prepareStatement(sql);
+			pst.setString(1, grades[0]); //VVIP
+			pst.setString(2, grades[1]); //VIP
+			pst.setString(3, grades[2]); //GOLD
+			ResultSet rs = pst.executeQuery();
+			
+			int cnt = 0;
+			while(rs.next()) {
+				String grade = rs.getString(2);
+				list.get(cnt).setGrade(grade);
+				cnt++;
+			}
+			
+			pst.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
 	}
 
 	
-	/*
+	
 	
 	// 잘되는 지 테스트
 	public static void main(String[] args) {
-			
+
 			CustomerDao dao = new CustomerDao();
-			
+
+			// 등급 조회 테스트
+			ArrayList<Customer> list2 = dao.selectGrade(new String[] {"160000","80000","40000"});
+			for(Customer customer: list2) {
+				System.out.println(customer);
+			}
+
+			/*
 			// Customer 기능 테스트
-			ArrayList<Customer> list = dao.customers();
-			
+			//ArrayList<Customer> list = dao.customers();
 			for(Customer customer: list) {
 				System.out.println(customer);
 			}
-			
 			// Customer 기능 테스트
 			String id="test0444";
 			Customer customer = dao.customer(id);
 			System.out.println("고객정보 한명: " + customer);
-			
-			
+
+
 			// Customer 등록 테스트
 			String id2 = "test0676";
 			String name2 = "5555";
 			String address2 = "고백구 행복동";
 			String phone_num2 = "010-8282-8282";
-			
+
 			Customer newCustomer = new Customer(id2, name2, address2, phone_num2);
 			dao.insert(newCustomer);
-		
-		}
-		*/
-	
+			 */
+
+	}
+
 }
