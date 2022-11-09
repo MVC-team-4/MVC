@@ -50,7 +50,7 @@ ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 		                <div class="tbname"><%= customer.getName() %></div>
 		                <div class="tbaddress"><%= customer.getAddress() %></div>
 		                <div class="tbphonenum"><%= customer.getPhone_num() %></div>
-		           		<input type="button" class="btn" value="수정">
+		           		<a href=""><input type="button" class="btn" value="수정"></a>
 		            </div>
 		        </div>
 		        <%} %>

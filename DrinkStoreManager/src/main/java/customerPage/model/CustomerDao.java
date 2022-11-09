@@ -111,6 +111,17 @@ public class CustomerDao {
 		return customer;
 	}
 	
+	public int update(Customer customer) {
+		int cnt = 0;
+		
+		customercon();
+		String sql = "update customer_info set name=?, address=?, phone_num=? where id=?";
+		
+		
+		
+	}
+
+	
 	/*
 	
 	// 잘되는 지 테스트

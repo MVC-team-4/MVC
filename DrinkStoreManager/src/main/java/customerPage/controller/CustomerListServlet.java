@@ -24,12 +24,12 @@ public class CustomerListServlet extends HttpServlet{
 		ArrayList<Customer> list = dao.customers();
 		request.setAttribute("list", list);
 		
-		request.getRequestDispatcher("WEB-INF/view/customerlist.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/view/customer_list.jsp").forward(request, response);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.getParameter("WEB-INF/view/customerlist.jsp");
+		request.getParameter("WEB-INF/view/customer_list.jsp");
 	}
 }

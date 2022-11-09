@@ -6,14 +6,16 @@ public class Customer {
 	private String name;
 	private String address;
 	private String phone_num;
+	private String grade;
 	
 	public Customer() {}
 	
-	public Customer(String id, String name, String address, String phone_num) {
+	public Customer(String id, String name, String address, String phone_num, String grade) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.phone_num = phone_num;
+		this.grade = grade;
 	}
 
 	public String getId() {
@@ -48,9 +50,18 @@ public class Customer {
 		this.phone_num = phone_num;
 	}
 	
+	
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
 	@Override
 	public String toString() {
-		return " 고객정보 [id : " + id + " name : " + " address : " + address + " phone number : " + phone_num + " ] ";
+		return " 고객정보 [id : " + id + " name : " + " address : " + address + " phone number : " + phone_num + " grade : " + grade + " ] ";
 	}
 	
 }
