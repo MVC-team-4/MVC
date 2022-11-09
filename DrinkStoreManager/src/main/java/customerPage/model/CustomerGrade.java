@@ -2,11 +2,13 @@ package customerPage.model;
 
 public class CustomerGrade {
 	
-	String vvip="160000";
-	String vip="80000";
-	String gold="40000";
+	String vvip;
+	String vip;
+	String gold;
 	public CustomerGrade() {
-		// TODO Auto-generated constructor stub
+		vvip="1000000";
+		vip="500000";
+		gold="200000";
 	}
 	public CustomerGrade(String vvip, String vip, String gold) {
 		super();

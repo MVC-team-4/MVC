@@ -134,7 +134,7 @@ public class CustomerDao {
 	}
 	
 	//회원 등급 포함 조회
-	public ArrayList<Customer> selectGrade(CustomerGrade grades) {
+	public ArrayList<Customer> selectGradeALL(CustomerGrade grades) {
 		ArrayList<Customer> list = customers();
 		customercon();
 		String sql = "SELECT o.id, CASE WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'VVIP' WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'VIP' WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'GOLD' ELSE 'SILVER' END AS grade FROM order_list o JOIN sale_list s ON s.order_number=o.order_number JOIN goods_list g ON s.goods_code=g.goods_code JOIN customer_info c ON o.id=c.id GROUP BY o.id";
@@ -171,7 +171,8 @@ public class CustomerDao {
 
 			// 등급 조회 테스트
 			CustomerGradeDao dao2 = new CustomerGradeDao();		
-			ArrayList<Customer> list2 = dao.selectGrade(dao2.selectGrade());
+			System.out.println(dao2.selectGrade());
+			ArrayList<Customer> list2 = dao.selectGradeALL(dao2.selectGrade());
 			for(Customer customer: list2) {
 				System.out.println(customer);
 			}
