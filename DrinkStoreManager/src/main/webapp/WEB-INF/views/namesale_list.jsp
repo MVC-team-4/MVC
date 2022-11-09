@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@ page import = "model.Sale" %>
+<%@ page import = "salePage.model.Sale" %>
 <%@ page import = "java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>

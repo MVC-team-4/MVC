@@ -216,5 +216,133 @@ public ArrayList<Sale> selectNameSale(String name){
 		
 		return list;
 	}
+
+
+public ArrayList<Sale> selectPriceSale(String day){
+	
+	ArrayList<Sale> list = new ArrayList<>();
+	dbCon();
+	
+	 
+	String sql = " select o.order_date, s.order_number, s.goods_code, s.tne_number, "
+			+ " to_char(g.goods_price, '99,999,999'), "
+			+ " to_char((s.tne_number * g.goods_price), '99,999,999') as total_price "
+			+ " from sale_list s "
+			+ " join goods_list g "
+			+ " on s.goods_code = g.goods_code "
+			+ " join order_list o "
+			+ " on s.order_number = o.order_number "
+			+ " where order_date = ? "
+			+ " order by s.order_number " ;
+	
+	try {
+		PreparedStatement pst = con.prepareStatement(sql);
+		pst.setString(1, day );
+		ResultSet rs = pst.executeQuery();
+		
+		
+		while(rs.next()) {
+			
+			System.out.println("1");
+			String order_date = rs.getString(1);
+			String order_number = rs.getString(2);
+			String goods_code = rs.getString(3);			
+			int tne_number = Integer.parseInt(rs.getString(4));
+			String price = rs.getString(5);
+			String sumprice = rs.getString(6);
+			
+			Sale s = new Sale();
+			s.setOrder_date(order_date);
+			s.setOrder_number(order_number);
+			s.setGoods_code(goods_code);
+			s.setThe_number(tne_number);
+			s.setPrice(price);
+			s.setSumPrice(sumprice);
+			
+			list.add(s);
+		}
+		
+		rs.close();
+		pst.close();
+		con.close();
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	return list;
+}
+
+
+public String selectTotalPrice(String day){
+	
+	dbCon();
+	String total_price ="";
+	String sql = " select to_char(sum(s.tne_number * g.goods_price), '99,999,999') as total_price "
+			+ " from sale_list s "
+			+ " join goods_list g "
+			+ " on s.goods_code = g.goods_code "
+			+ " join order_list o "
+			+ " on s.order_number = o.order_number "
+			+ " where order_date = ? ";
+	
+	try {
+		PreparedStatement pst = con.prepareStatement(sql);
+		pst.setString(1, day );
+		ResultSet rs = pst.executeQuery();
+		
+		
+		if(rs.next()) {
+			total_price = rs.getString(1);
+			
+	
+		}
+		
+		rs.close();
+		pst.close();
+		con.close();
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	return total_price;
+}
+
+public String TotalPrice(){
+	
+	dbCon();
+	String total_price ="";
+	String sql = " select to_char(sum(s.tne_number * g.goods_price), '999,999,999') as total_price "
+			+ " from sale_list s "
+			+ " join goods_list g "
+			+ " on s.goods_code = g.goods_code "
+			+ " join order_list o "
+			+ " on s.order_number = o.order_number ";
+	
+	try {
+		PreparedStatement pst = con.prepareStatement(sql);
+		ResultSet rs = pst.executeQuery();
+		
+		
+		if(rs.next()) {
+			total_price = rs.getString(1);
+			
+	
+		}
+		
+		rs.close();
+		pst.close();
+		con.close();
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	return total_price;
+}
 	
 }

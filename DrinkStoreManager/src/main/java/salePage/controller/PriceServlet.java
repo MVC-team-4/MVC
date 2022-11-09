@@ -12,8 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import salePage.model.Sale;
 import salePage.model.SaleDao;
 
-@WebServlet("/sale")
-public class Servlet extends HttpServlet{
+@WebServlet("/pricesale")
+public class PriceServlet extends HttpServlet
+{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,16 +22,17 @@ public class Servlet extends HttpServlet{
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/plain;charset=utf-8");
 		
+		
+		String day =request.getParameter("day");		
+		
 		SaleDao dao = new SaleDao();
-		ArrayList<Sale> list = dao.selectSales();
-		String totalprice = dao.TotalPrice();
+		ArrayList<Sale> list = dao.selectPriceSale(day);		 
+		String totalprice = dao.selectTotalPrice(day);
 		
 		//데이터심기
 		request.setAttribute("list", list);
-		request.setAttribute("totalprice", totalprice);
+	 	request.setAttribute("totalprice", totalprice);
 		//view를 거쳐서 출력
-		request.getRequestDispatcher("WEB-INF/views/sale_list.jsp").forward(request, response);
-		
+		request.getRequestDispatcher("WEB-INF/views/price.jsp").forward(request, response);
 	}
-
 }

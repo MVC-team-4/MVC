@@ -8,11 +8,14 @@ public class Sale {
 	String goods_code;
 	int the_number;
 	String order_date;
+	String price;
+	String sumprice;
+	
 	
 	//생성자
 	public Sale() {}
 	public Sale(String order_number, String id, String sale_code, String goods_code, int the_number,
-			String order_date) {
+			String order_date, String price, String sumprice) {
 		super();
 		this.order_number = order_number;
 		this.id = id;
@@ -20,6 +23,8 @@ public class Sale {
 		this.goods_code = goods_code;
 		this.the_number = the_number;
 		this.order_date = order_date;
+		this.price = price;
+		this.sumprice = sumprice;
 	}
 	
 	//getter, setter
@@ -63,7 +68,20 @@ public class Sale {
 	}
 	public void setOrder_date(String order_date) {
 		this.order_date = order_date;
+	}	
+	public String getPrice() {
+		return price;
 	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
+	public String getSumPrice() {
+		return sumprice;
+	}
+	public void setSumPrice(String sumprice) {
+		this.sumprice = sumprice;
+	}
+	
 	
 	//toString
 	@Override
