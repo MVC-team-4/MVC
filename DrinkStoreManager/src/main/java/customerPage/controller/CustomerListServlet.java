@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import customerPage.model.Customer;
 import customerPage.model.CustomerDao;
+import customerPage.model.CustomerService;
 
 @WebServlet("/Customerlist")
 public class CustomerListServlet extends HttpServlet{
@@ -20,8 +21,9 @@ public class CustomerListServlet extends HttpServlet{
 		
 		
 		CustomerDao dao = new CustomerDao();
+		CustomerService service = new CustomerService(dao);
 		
-		ArrayList<Customer> list = dao.customers();
+		ArrayList<Customer> list = service.selectGradeAll();
 		request.setAttribute("list", list);
 		
 		request.getRequestDispatcher("WEB-INF/view/customer_list.jsp").forward(request, response);

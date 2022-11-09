@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import customerPage.model.Customer;
 import customerPage.model.CustomerDao;
 
 public class CustomerDao {
@@ -135,15 +134,15 @@ public class CustomerDao {
 	}
 	
 	//회원 등급 포함 조회
-	public ArrayList<Customer> selectGrade(String[] grades) {
+	public ArrayList<Customer> selectGrade(CustomerGrade grades) {
 		ArrayList<Customer> list = customers();
 		customercon();
 		String sql = "SELECT o.id, CASE WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'VVIP' WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'VIP' WHEN SUM(g.goods_price * s.tne_number)>= ? THEN 'GOLD' ELSE 'SILVER' END AS grade FROM order_list o JOIN sale_list s ON s.order_number=o.order_number JOIN goods_list g ON s.goods_code=g.goods_code JOIN customer_info c ON o.id=c.id GROUP BY o.id";
 		try {
 			PreparedStatement pst = con.prepareStatement(sql);
-			pst.setString(1, grades[0]); //VVIP
-			pst.setString(2, grades[1]); //VIP
-			pst.setString(3, grades[2]); //GOLD
+			pst.setString(1, grades.getVvip()); //VVIP
+			pst.setString(2, grades.getVip()); //VIP
+			pst.setString(3, grades.getGold()); //GOLD
 			ResultSet rs = pst.executeQuery();
 			
 			int cnt = 0;
@@ -171,7 +170,8 @@ public class CustomerDao {
 			CustomerDao dao = new CustomerDao();
 
 			// 등급 조회 테스트
-			ArrayList<Customer> list2 = dao.selectGrade(new String[] {"160000","80000","40000"});
+			CustomerGradeDao dao2 = new CustomerGradeDao();		
+			ArrayList<Customer> list2 = dao.selectGrade(dao2.selectGrade());
 			for(Customer customer: list2) {
 				System.out.println(customer);
 			}

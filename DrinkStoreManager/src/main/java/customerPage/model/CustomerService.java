@@ -16,9 +16,9 @@ public class CustomerService {
 	}
 	
 	//등급 포함 조회
-	public ArrayList<Customer> selectGradeAll(String[] grades){
-		//grades[0]:VVIP기준, grades[1]:VIP기준, grades[2]:GOLD기준		
-		ArrayList<Customer> list = dao.selectGrade(grades);
+	public ArrayList<Customer> selectGradeAll(){
+		CustomerGradeDao dao2 = new CustomerGradeDao();		
+		ArrayList<Customer> list = dao.selectGrade(dao2.selectGrade());
 		return list;
 	}
 }
