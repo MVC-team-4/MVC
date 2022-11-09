@@ -2,6 +2,9 @@ package goodsPage.model.service;
 
 import java.util.ArrayList;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import goodsPage.model.dao.GoodsDao;
 import goodsPage.model.dto.Goods;
 
@@ -22,6 +25,25 @@ public class GoodsService {
 	//상품 전체 조회 서비스
 	public ArrayList<Goods> goodsSelectAll() {
 		return dao.selectGoods();
+	}
+	
+	//상품 전체 조회 JSON 데이터
+	public String getJson() {
+		ArrayList<Goods> list = dao.selectGoods();
+		
+		JSONArray jArray = new JSONArray();
+		for(Goods goods : list) {
+			JSONObject json = new JSONObject();
+			json.put("kind", goods.getKind());
+			json.put("goods_code", goods.getGoods_code());
+			json.put("goods_name", goods.getGoods_name());
+			json.put("goods_stock", goods.getGoods_stock());
+			jArray.add(json);
+		}
+		JSONObject goodsData = new JSONObject();
+		goodsData.put("goodsData", jArray);
+		
+		return goodsData.toString();
 	}
 	
 	//상품 하나 조회 서비스
