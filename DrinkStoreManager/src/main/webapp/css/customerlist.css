@@ -8,7 +8,7 @@
 .wrap{
     padding : 20px;
     margin:0 auto;
-    border:1px solid black;
+    border:2px solid black;
     width: 1200px;
 }
 h2{
@@ -18,14 +18,13 @@ h2{
     margin-bottom: 20px;
 }
 .table{
-    width: 1010px;
+    width: 1000px;
     margin: 0 auto;
     border: 3px solid #000000;
     text-align: left;
     border-collapse: collapse;
-    position: relative;
 }
-.tbID, .tbNAME, .tbADDRESS, .tbPHONENUM {
+.tbID, .tbNAME, .tbADDRESS, .tbPHONENUM, .tbGRADE{
 	font-size : 28px;
 	border: 1px solid #000000;
 	text-align: center;
@@ -35,43 +34,13 @@ h2{
 	height: 40px;
 	border-collapse: collapse;
 }
-.blank{
-	border: 1px solid #000000;
-	background: #CFCFCF;
-	width:48px;
-	height: 40px;
-}
-.tbGRADE{
-	font-size : 28px;
-	border: 1px solid #000000;
-	text-align: center;
-	font-weight: bold;
-	background: #CFCFCF;
-	width: 150px;
-	height: 40px;
-	border-collapse: collapse;
-}
-.tbhead, .tbid, .tbname, .tbaddress, .tbphonenum {
+
+.tbid, .tbname, .tbaddress, .tbphonenum, .tbgrade{
 	border: 1px solid #000000;
 	width: 200px;
 	height: 40px;
 	border-collapse: collapse;
 	font-size : 20px;
-}
-.tbgrade{
-	border: 1px solid #000000;
-	width: 150px;
-	height: 40px;
-	border-collapse: collapse;
-	font-size : 20px;
-}
-.btn{
-	position: absolute;
-	right: 0px;
-	border: 1px solid #000000;
-	width: 50px;
-	height: 42px;
-	text-align: center;
 }
 .tr{
 	display: flex;

@@ -40,7 +40,6 @@ ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 		                <div class="tbADDRESS">주소</div>
 		                <div class="tbPHONENUM">전화번호</div>
 		                <div class="tbGRADE">고객등급</div>
-		                <div class="blank"> </div>
 		            </div>
 		        </div>        
 		        <!--tbody-->
@@ -53,7 +52,6 @@ ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 		                <div class="tbaddress"><%= customer.getAddress() %></div>
 		                <div class="tbphonenum"><%= customer.getPhone_num() %></div>
 		           		<div class="tbgrade"><%= customer.getGrade() %></div>
-		           		<a href=""><input type="button" class="btn" value="수정"></a>
 		            </div>
 		        </div>
 		        <%} %>
