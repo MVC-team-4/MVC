@@ -47,7 +47,8 @@ public class CustomerDao {
 					String name = rs.getString(2);
 					String address = rs.getString(3);
 					String phone_num = rs.getString(4);
-					Customer customer = new Customer(id, name, address, phone_num);
+					String grade = rs.getString(5);
+					Customer customer = new Customer(id, name, address, phone_num,grade);
 					list.add(customer);
 				}
 				
@@ -72,6 +73,7 @@ public class CustomerDao {
 			pst.setString(2, customer.getName());
 			pst.setString(3, customer.getAddress());
 			pst.setString(4, customer.getPhone_num());
+			pst.setString(5, customer.getGrade());
 			pst.executeUpdate();
 			
 			pst.close();
@@ -98,7 +100,8 @@ public class CustomerDao {
 				String tmpName = rs.getString(2);
 				String tmpAddress = rs.getString(3);
 				String tmpPhone_num = rs.getString(4);
-				customer = new Customer(tmpId, tmpName, tmpAddress, tmpPhone_num);
+				String tmpGrade = rs.getString(5);
+				customer = new Customer(tmpId, tmpName, tmpAddress, tmpPhone_num, tmpGrade);
 				
 			}
 			
