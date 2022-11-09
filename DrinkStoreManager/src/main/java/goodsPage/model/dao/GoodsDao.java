@@ -125,7 +125,44 @@ public class GoodsDao {
 			e.printStackTrace();
 		}	
 		return g;		
+	}
+	
+	// 물품가격으로 정렬
+	public ArrayList<Goods> selectGoodsSortByPrice(){
+		ArrayList<Goods> list = new ArrayList<>();
+		dbCon();
+		String sql ="SELECT * FROM goods_list ORDER BY goods_price ";
+		try {
+			Statement st  = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+
+			while( rs.next()) {
+
+				String goods_code = rs.getString(1);
+				String goods_name = rs.getString(2);
+				String kind = rs.getString(3);
+				String goods_price = rs.getString(4);
+				String goods_stock = rs.getString(5);
+
+				Goods g = new Goods();
+				g.setGoods_code(goods_code);
+				g.setGoods_name(goods_name);
+				g.setKind(kind);
+				g.setGoods_price(goods_price);
+				g.setGoods_stock(goods_stock);
+
+				list.add(g);
+			}
+
+			rs.close();
+			st.close();
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+		return list;		
 	}//
+	
 	
 	//상품 데이터 수정
 	public void updateGoods(Goods updateGoods){
