@@ -1,19 +1,19 @@
 @charset "EUC-KR";
 
 section{
-	margin-top: -10%;
+	margin-top: -5%;
 }
 
 table{
 	width:1000px;
 	margin:0px auto;
-	border:1px solid black;
+	border:1px solid  #888;
 	border-collapse: collapse;
 	margin-bottom: 50px;
 }
 
 td{
-	border:1px solid black;
+	border:1px solid  #888;
 	border-collapse: collapse;
 	text-align: center;
 	height:30px;

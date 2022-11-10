@@ -21,9 +21,13 @@ ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 %>
 	<form action="customer" method="post">
 			    
+			<caption>
+	    		<h3> 고객 정보 조회 </h3>
+	    	</caption>
+			    
 	    <div class="wrap">
-	
-	    	<h2> 고객 정보 조회 </h2>
+			
+			
 	    	
 	    	<!--table-->
 		    <div class="table">

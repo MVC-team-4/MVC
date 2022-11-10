@@ -32,7 +32,7 @@ public class DateServlet extends HttpServlet{
 		//데이터심기
 		request.setAttribute("list", list);
 		//view를 거쳐서 출력
-		request.getRequestDispatcher("WEB-INF/views/datesale_list.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/views/saledate_list.jsp").forward(request, response);
 		
 	}
 }

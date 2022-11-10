@@ -58,7 +58,7 @@
 			            </div>
 			        </li>
 			    	<li class="bb">
-			            <div class="item"><a>고객 조회</a>
+			            <div class="item"><a href="/DrinkStoreManager/Customerlist">고객 조회</a>
 			            </div>
 			        </li>
 			       	<li class="bb">
@@ -66,11 +66,11 @@
 							<div class="item_sell">
 			                    <div class="item_a">조회 방법
 			                        <div class="drop">
-			                            <p><a href="">전체</a></p>
-			                            <p><a href="">날짜</a></p>
-			                            <p><a href="">상품코드</a></p>
-			                            <p><a href="">ID</a></p>
-			                             <p><a href="">매출조회</a></p>
+			                            <p><a href="/DrinkStoreManager/sale">전체</a></p>
+			                            <p><a href="/DrinkStoreManager/datesale">날짜</a></p>
+			                            <p><a href="/DrinkStoreManager/codesale">상품코드</a></p>
+			                            <p><a href="/DrinkStoreManager/namesale">ID</a></p>
+			                             <p><a href="/DrinkStoreManager/pricesale">매출조회</a></p>
 			                        </div>
 			                    </div>
 			            	</div>

@@ -33,6 +33,6 @@ public class PriceServlet extends HttpServlet
 		request.setAttribute("list", list);
 	 	request.setAttribute("totalprice", totalprice);
 		//view를 거쳐서 출력
-		request.getRequestDispatcher("WEB-INF/views/price.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/views/saleprice.jsp").forward(request, response);
 	}
 }

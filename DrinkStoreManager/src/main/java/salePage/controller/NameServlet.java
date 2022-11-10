@@ -33,6 +33,6 @@ public class NameServlet extends HttpServlet
 		//데이터심기
 		request.setAttribute("list", list);
 		//view를 거쳐서 출력
-		request.getRequestDispatcher("WEB-INF/views/namesale_list.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/views/salename_list.jsp").forward(request, response);
 	}
 }
