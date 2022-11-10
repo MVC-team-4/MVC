@@ -1,4 +1,4 @@
-package goodsPage.model.dao;
+package goodsPage.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import goodsPage.model.dto.Goods;
 
 public class GoodsDao {
 	

@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <%@ page import = "salePage.model.Sale" %>
 <%@ page import = "java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <%
 String path =  request.getContextPath();   
@@ -29,18 +29,18 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 <table>
 
 <caption>
-<h3>³¯Â¥º° Á¶È¸</h3>
-³¯Â¥ : <input type="text" id="date">
-<button onclick="find()">°Ë»ö</button>
+<h3>ë‚ ì§œë³„ ì¡°íšŒ</h3>
+ë‚ ì§œ : <input type="text" id="date">
+<button onclick="find()">ê²€ìƒ‰</button>
 </caption>
 
 <tr class="f">
-<td>ÁÖ¹®³¯Â¥</td>
-<td>ÁÖ¹®¹øÈ£</td>
-<td>¾ÆÀÌµğ</td>
-<td>ÆÇ¸ÅÄÚµå</td>
-<td>»óÇ°ÄÚµå</td>
-<td>°¹¼ö</td>
+<td>ì£¼ë¬¸ë‚ ì§œ</td>
+<td>ì£¼ë¬¸ë²ˆí˜¸</td>
+<td>ì•„ì´ë””</td>
+<td>íŒë§¤ì½”ë“œ</td>
+<td>ìƒí’ˆì½”ë“œ</td>
+<td>ê°¯ìˆ˜</td>
 </tr>
 
 <%for (Sale sale: list)  {%>

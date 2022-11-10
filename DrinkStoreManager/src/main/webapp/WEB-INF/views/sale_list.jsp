@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <%@ page import = "salePage.model.Sale" %>
 <%@ page import = "java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <%
 String path =  request.getContextPath();   
@@ -27,16 +27,16 @@ String total_price = (String)request.getAttribute("totalprice");
 <table>
 
 <caption>
-<h3>�Ǹų�����ȸ</h3>
+<h3>판매내역조회</h3>
 </caption>
 
 <tr class="f">
-<td>�ֹ���ȣ</td>
-<td>���̵�</td>
-<td>�Ǹ��ڵ�</td>
-<td>��ǰ�ڵ�</td>
-<td>����</td>
-<td>�ֹ���¥</td>
+<td>주문번호</td>
+<td>아이디</td>
+<td>판매코드</td>
+<td>상품코드</td>
+<td>갯수</td>
+<td>주문날짜</td>
 </tr>
 
 <%for (Sale sale: list)  {%>
@@ -52,7 +52,7 @@ String total_price = (String)request.getAttribute("totalprice");
 </table>
 
 <%if (total_price != null)  {%>
-<span>�� ����: \ <%= total_price%></span>
+<span>총 매출: \ <%= total_price%></span>
 <%} %>
 
 </section>

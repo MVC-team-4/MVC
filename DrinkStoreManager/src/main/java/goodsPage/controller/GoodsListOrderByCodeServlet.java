@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import goodsPage.model.dao.GoodsDao;
-import goodsPage.model.service.GoodsService;
+import goodsPage.model.GoodsDao;
+import goodsPage.model.GoodsService;
 
 @WebServlet("/goodsOrderByCodeJson.do")
 public class GoodsListOrderByCodeServlet extends HttpServlet {
