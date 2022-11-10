@@ -19,7 +19,8 @@ function find(){
 </script>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="/main/header.jsp"></jsp:include>
+<jsp:include page="/main/nav.jsp"></jsp:include>
 <%
 ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 %>
@@ -53,5 +54,6 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 </table>
 </section>
 
+<jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
 </html>

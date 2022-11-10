@@ -19,7 +19,8 @@ function find(){
 </script>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="/main/header.jsp"></jsp:include>
+<jsp:include page="/main/nav.jsp"></jsp:include>
 <%
 ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 String total_price = (String)request.getAttribute("totalprice");
@@ -61,5 +62,6 @@ String total_price = (String)request.getAttribute("totalprice");
  
 </section>
 
+<jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
 </html>

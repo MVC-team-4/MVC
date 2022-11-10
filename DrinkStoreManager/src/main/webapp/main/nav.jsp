@@ -70,6 +70,7 @@
 			                            <p><a href="">날짜</a></p>
 			                            <p><a href="">상품코드</a></p>
 			                            <p><a href="">ID</a></p>
+			                             <p><a href="">매출조회</a></p>
 			                        </div>
 			                    </div>
 			            	</div>

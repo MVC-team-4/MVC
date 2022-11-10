@@ -14,7 +14,8 @@ String path =  request.getContextPath();
 </head>
 
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="/main/header.jsp"></jsp:include>
+<jsp:include page="/main/nav.jsp"></jsp:include>
 <section>
 
 <%
@@ -54,6 +55,8 @@ String total_price = (String)request.getAttribute("totalprice");
 <span>√— ∏≈√‚: \ <%= total_price%></span>
 <%} %>
 
+
 </section>
+<jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
 </html>
