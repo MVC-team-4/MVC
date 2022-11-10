@@ -55,8 +55,8 @@ String total_price = (String)request.getAttribute("totalprice");
 <span>√— ∏≈√‚: \ <%= total_price%></span>
 <%} %>
 
-
 </section>
+
 <jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
 </html>
