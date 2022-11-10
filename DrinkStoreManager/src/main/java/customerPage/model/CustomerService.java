@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class CustomerService {
 
 	CustomerDao dao;
+	CustomerGradeDao dao2;
 	
 	public CustomerService (CustomerDao dao) {
 		this.dao = dao;
+		dao2 = new CustomerGradeDao();
 	}
 	
 	public ArrayList<Customer> selectAll(){
@@ -16,9 +18,13 @@ public class CustomerService {
 	}
 	
 	//등급 포함 조회
-	public ArrayList<Customer> selectGradeAll(String[] grades){
-		//grades[0]:VVIP기준, grades[1]:VIP기준, grades[2]:GOLD기준		
-		ArrayList<Customer> list = dao.selectGrade(grades);
+	public ArrayList<Customer> selectGradeAll(){
+		ArrayList<Customer> list = dao.selectGradeALL(dao2.selectGrade());
 		return list;
+	}
+	
+	//등급 수정
+	public void updateGrade(CustomerGrade grade) {
+		dao2.updateGrade(grade);
 	}
 }
