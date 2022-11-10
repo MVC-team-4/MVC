@@ -1,12 +1,11 @@
-package goodsPage.model.service;
+package goodsPage.model;
 
 import java.util.ArrayList;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import goodsPage.model.dao.GoodsDao;
-import goodsPage.model.dto.Goods;
+import goodsPage.model.GoodsDao;
 
 public class GoodsService {
 	

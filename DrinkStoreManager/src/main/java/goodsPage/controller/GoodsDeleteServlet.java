@@ -1,7 +1,6 @@
 package goodsPage.controller;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,9 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import goodsPage.model.dao.GoodsDao;
-import goodsPage.model.dto.Goods;
-import goodsPage.model.service.GoodsService;
+import goodsPage.model.GoodsDao;
+import goodsPage.model.GoodsService;
 
 @WebServlet("/goods-delete.do")
 public class GoodsDeleteServlet extends HttpServlet {

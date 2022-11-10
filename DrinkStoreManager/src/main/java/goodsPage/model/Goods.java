@@ -1,4 +1,4 @@
-package goodsPage.model.dto;
+package goodsPage.model;
 
 public class Goods {
 	

@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import goodsPage.model.dao.GoodsDao;
-import goodsPage.model.dto.Goods;
-import goodsPage.model.service.GoodsService;
+import goodsPage.model.Goods;
+import goodsPage.model.GoodsDao;
+import goodsPage.model.GoodsService;
 
 @WebServlet("/goods-list.do")
 public class GoodsListServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("조회");
+	//	System.out.println("조회");
 		GoodsService service = new GoodsService(new GoodsDao());
 		ArrayList<Goods> list = service.goodsSelectAll();
 		request.setAttribute("list", list);

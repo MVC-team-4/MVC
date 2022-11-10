@@ -3,7 +3,7 @@
     pageEncoding="UTF-8"%>  
 <%@ page import="java.sql.*"%>  
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="goodsPage.model.dto.Goods"%>  
+<%@ page import="goodsPage.model.Goods"%>  
 <!DOCTYPE html>
 <html>
 <head>
