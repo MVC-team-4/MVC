@@ -32,9 +32,10 @@ public class LoginServlet   extends HttpServlet{
 
 		if(result==1) {
 			PrintWriter out = response.getWriter();
-			out.println("<script>");
-			out.println("location.href = '/view/main.jsp'"); // main 페이지로 사용자를 보냄 
-			out.println("</script>");		  
+//			out.println("<script>");
+//			out.println("location.href = '/main/main.jsp'"); // main 페이지로 사용자를 보냄 
+//			out.println("</script>");
+			response.sendRedirect("/DrinkStoreManager/main/main.jsp");
 		}else if(result==0) {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");

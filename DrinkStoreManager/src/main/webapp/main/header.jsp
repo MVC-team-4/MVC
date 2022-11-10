@@ -8,7 +8,7 @@
 
 <style type="text/css">
        h2 {
-		  position: relative;
+		  /* position: relative; */
 		  padding: 0;
 		  margin: 0;
 		  font-family: "Raleway", sans-serif;
