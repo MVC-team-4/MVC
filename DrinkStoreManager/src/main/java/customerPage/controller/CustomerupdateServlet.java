@@ -19,14 +19,9 @@ public class CustomerupdateServlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		CustomerDao dao = new CustomerDao();
-		CustomerService service = new CustomerService(dao);
-		
-		ArrayList<Customer> list = service.selectGradeAll();
-		request.setAttribute("list", list);
-		
-		request.getRequestDispatcher("WEB-INF/view/customerlist.jsp").forward(request, response);
+	
+		//고객 등급관리 화면으로 이동
+		request.getRequestDispatcher("WEB-INF/views/customer_update.jsp").forward(request, response);
 	}
 	
 	@Override

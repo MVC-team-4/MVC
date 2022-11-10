@@ -1,0 +1,15 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+section{
+    min-width: 1200px;
+    min-height: 900px;
+    padding-top: 150px;
+    padding-left: 250px;
+    background-color: #f4f4f4;
+}

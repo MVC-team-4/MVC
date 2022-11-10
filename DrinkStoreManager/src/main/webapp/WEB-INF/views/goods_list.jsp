@@ -9,6 +9,7 @@
 <head>
 	<% String path = request.getContextPath(); %>
 	<link href="<%=path %>/css/goods_list.css" rel= "stylesheet" type="text/css">
+	<link href="<%=path %>/css/section.css" rel= "stylesheet" type="text/css">
 	<meta charset="UTF-8">
 	<title>상품 조회</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

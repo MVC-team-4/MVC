@@ -11,6 +11,7 @@ String path =  request.getContextPath();
 %>
 
 <link href="<%=path%>/css/goods_reg.css" rel="stylesheet">
+<link href="<%=path %>/css/section.css" rel= "stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="/main/header.jsp"></jsp:include>

@@ -4,14 +4,14 @@
 	margin: 0;
 }
 section{
-	width: 80%;
 	margin: 0 auto;
 }
 .goodsReg-wrap{
 	width: 700px;
 	height: 400px;
 	margin: 0 auto;
-	border: 1px solid rgb(237, 240, 245);
+	border: 1px solid lightgray;
+	background-color: white;
 	margin-bottom:300px;
 }
 h3{
@@ -23,6 +23,7 @@ form{
 }
 table{
 	margin:20px auto;
+	color: #333333;
 }
 
 table, tr, td{

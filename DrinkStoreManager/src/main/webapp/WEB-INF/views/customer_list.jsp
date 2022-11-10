@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>고객 조회</title>
 
 <%  String path = request.getContextPath();
 %>
 <link href="<%=path %>/css/customerlist.css" type="text/css" rel="stylesheet">
-<link href="<%=path%>/css/header.jsp">
+<link href="<%=path %>/css/section.css" rel= "stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="/main/header.jsp"></jsp:include>
@@ -19,6 +19,7 @@
 <%
 ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 %>
+<section>
 	<form action="customer" method="post">
 			    
 			<caption>
@@ -60,6 +61,7 @@ ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 	    </div>
     
     </form>
+    </section>
     
     <jsp:include page="/main/footer.jsp"></jsp:include>
 </body>

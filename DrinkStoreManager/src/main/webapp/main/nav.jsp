@@ -5,90 +5,69 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 <% String path = request.getContextPath(); %>
-<link href="<%=path %>/css/navcss.css" rel= "stylesheet" type="text/css">
-<style type="text/css">
-a{
-		text-decoration:none;
-		color:black;
-	}
-</style>
+<link href="<%=path %>/css/nav.css" rel= "stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="<%=path %>/js/nav.js"></script>
+
 </head>
 <body>
-	<div id="body-wrapper">
-		<div id="body-content">
-			<div class="dropmenu">
-			    <ul class="aa">
-			        <li class="bb">
-			
-			            <div class="item">주류
-			                <!--숨김메뉴-->
-			                <div class="item_list">
-			                    <div class="item_a">위스키
-			                        <div class="drop">
-			                            <p><a href="">발렌타인 30년</a></p>
-			                            <p><a href="">글렌모렌지 시그넷</a></p>
-			                            <p><a href="">아드벡</a></p>
-			                            <p><a href="">조니워커</a></p>
-			                        </div>
-			                    </div>
-			                    <div class="item_a">와인
-			                        <div class="drop">
-			                            <p><a href="">로얄 드마리아</a></p>
-			                            <p><a href="">샤또 몽로즈 2015</a></p>
-			                            <p><a href="">까시예로 델 디아블로</a></p>
-			                        </div>
-			                    </div>
-			                    <div class="item_a">샴페인
-			                        <div class="drop">
-			                            <p><a href="">모엣 샹동</a></p>
-			                            <p><a href="">돔페리뇽</a></p>
-			                            <p><a href="">크루그</a></p>
-			                            <p><a href="">뵈브클리코</a></p>
-			                        </div>
-			                    </div>
-			                    <div class="item_a">맥주
-			                        <div class="drop">
-			                            <p><a href="">기네스</a></p>
-			                            <p><a href="">버드 라이트</a></p>
-			                            <p><a href="">하이네켄</a></p>
-			                            <p><a href="">코로나</a></p>
-			                        </div>
-			                    </div>
-			                </div>
-			            </div>
-			            
-			        </li>
-			        <li class="bb">
-			            <div class="item"><a href="/DrinkStoreManager/goods-reg.do">상품 등록</a>
-			            </div>
-			        </li>
-			        <li class="bb">
-			            <div class="item"><a href="/DrinkStoreManager/goods-list.do">상품 조회</a>
-			            </div>
-			        </li>
-			    	<li class="bb">
-			            <div class="item"><a href="/DrinkStoreManager/Customerlist">고객 조회</a>
-			            </div>
-			        </li>
-			       	<li class="bb">
-			            <div class="item"><a>판매 내역</a>
-							<div class="item_sell">
-			                    <div class="item_a">조회 방법
-			                        <div class="drop">
-			<p><a href="/DrinkStoreManager/sale">전체</a></p>
-			                            <p><a href="/DrinkStoreManager/datesale">날짜</a></p>
-			                            <p><a href="/DrinkStoreManager/codesale">상품코드</a></p>
-			                            <p><a href="/DrinkStoreManager/namesale">ID</a></p>
-			                             <p><a href="/DrinkStoreManager/pricesale">매출조회</a></p>
-			                        </div>
-			                    </div>
-			            	</div>
-			            </div>
-			        </li>
-			    </ul>
-			</div>
-		</div>
-	</div>
+	<nav>
+        <div class="profile">
+            <div class="nav-logo">
+                <a href="#">
+                    A
+                </a>
+            </div>
+            <div class="store-name">
+                <a href="#">ACORN LIQUOR</a>
+            </div>
+        </div>
+        <ul class="nav-ul">
+            <li class="li1">
+                <a href="javascript:listClick1();">상품관리</a>
+            </li>
+            <ul class="nav-ul2 list1">
+                <li>
+                    <a href="/DrinkStoreManager/goods-reg.do">상품 등록</a>
+                </li>
+                <li>
+                    <a href="/DrinkStoreManager/goods-list.do">상품 조회/수정</a>
+                </li>
+            </ul>
+            <li class="li2">
+                <a href="javascript:listClick2();">판매내역</a>
+            </li>
+            <ul class="nav-ul2 list2">
+                <li>
+                    <a href="/DrinkStoreManager/sale">전체 조회</a>
+                </li>
+                <li>
+                    <a href="/DrinkStoreManager/datesale">날짜 검색</a>
+                </li>
+                <li>
+                    <a href="/DrinkStoreManager/codesale">상품코드 검색</a>
+                </li>
+                <li>
+                    <a href="/DrinkStoreManager/namesale">ID 검색</a>
+                </li>
+                <li>
+                    <a href="/DrinkStoreManager/pricesale">날짜별 매출 조회</a>
+                </li>
+            </ul>
+            <li class="li3">
+                <a href="javascript:listClick3();">고객관리</a>
+            </li>
+            <ul class="nav-ul2 list3">
+                <li>
+                    <a href="/DrinkStoreManager/Customerlist">고객 조회</a>
+                </li>
+                <li>
+                    <a href="/DrinkStoreManager/Customerupdate">고객 등급관리</a>
+                </li>
+            </ul>
+        </ul>
+    </nav>
 </body>
 </html>

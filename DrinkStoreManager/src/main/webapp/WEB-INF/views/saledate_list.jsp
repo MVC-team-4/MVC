@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import = "salePage.model.Sale" %>
 <%@ page import = "java.util.ArrayList" %>
@@ -6,11 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>날짜별 판매내역 조회</title>
 <%
 String path =  request.getContextPath();   
 %>
 <link href="<%=path%>/css/sale_list.css" rel="stylesheet">
+<link href="<%=path %>/css/section.css" rel= "stylesheet" type="text/css">
 <script>
 function find(){
 	let date = document.getElementById("date");

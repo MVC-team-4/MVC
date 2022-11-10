@@ -5,63 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
- html, body{
-	    margin: 0;
-	    padding: 0;
-	    height: 100%;
-	}
-	footer{
-		/* position: relative; */
-	    bottom: 0;
-	    left: 0;
-	    width: 100%;
-	    height:140px;
-	    border-top: 1.5px solid #c50000;
-	
-	}
-	footer div{
-	    display: block;
-	}
-	footer .inner_footer{
-	    padding: 15px 0 20px;
-	    font-size: 13px;
-	    overflow:auto;
-	}
-	footer .inner_footer .provision{
-	    text-align: center;
-	    overflow: hidden;
-	    margin: 0 auto;
-	    padding-top: 5px;
-	}
-	footer .inner_footer .provision .cus_center{
-	    display: block;
-	    margin: 8px 0 4px;
-	}
-	footer .inner_footer .provision .arr{
-	    display: block;
-	    margin-top: 15px;
-	}
-	footer .inner_footer .provision li{
-	    display: inline;
-	    position: relative;
-	    padding: 0 7px 0 11px;
-	    line-height: 14px;
-	}
-	footer .inner_footer .provision li::before{
-	    position: absolute;
-	    top: 50%;
-	    left: 0;
-	    width: 1px;
-	    height: 11px;
-	    margin-top: -5px;
-	    background-color: #7d7f8162;
-	    content: '';
-	}
-	footer ul, li{
-	    list-style: none;
-	}
-</style>
+<% String path = request.getContextPath(); %>
+<link href="<%=path %>/css/footer.css" rel= "stylesheet" type="text/css">
+
 </head>
 <body>
      	<!--footer영역-->

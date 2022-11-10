@@ -4,13 +4,19 @@
 	margin: 0;
 }
 section{
-	width: 80%;
-	height: 1000px;
 	margin: 0 auto;
 }
 h3{
 	margin: 20px 0;
 	text-align: center;
+}
+.goodsUpdate-wrap{
+	width: 700px;
+	height: 400px;
+	margin: 0 auto;
+	border: 1px solid lightgray;
+	background-color: white;
+	margin-bottom:300px;
 }
 form{
 	padding: 10px;

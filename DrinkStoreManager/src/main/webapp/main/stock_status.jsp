@@ -16,6 +16,7 @@ String path =  request.getContextPath();
 </head>
 <body>
 
+    <h3>재고현황</h3>
     <table id="stock_tbl">
         <thead>
             <tr>
