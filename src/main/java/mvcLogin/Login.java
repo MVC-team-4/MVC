@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/login.do")
+@WebServlet("/login")
 public class Login   extends HttpServlet{
 	
 	
@@ -33,7 +33,7 @@ public class Login   extends HttpServlet{
 		if(result==1) {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
-			out.println("location.href = '/view/main.jsp'"); // main 페이지로 사용자를 보냄 
+			out.println("location.href = '/webapp/view/main.jsp'"); // main 페이지로 사용자를 보냄 
 			out.println("</script>");		  
 		}else if(result==0) {
 			PrintWriter out = response.getWriter();

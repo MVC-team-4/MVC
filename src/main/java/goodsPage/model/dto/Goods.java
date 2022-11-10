@@ -1,6 +1,6 @@
 package goodsPage.model.dto;
 
-public class Goods {
+public class goods {
 	
 	String goods_code;
 	String goods_name;
@@ -8,10 +8,10 @@ public class Goods {
 	String goods_price;
 	String goods_stock;
 	
-	public Goods() {
+	public goods() {
 	}
 
-	public Goods(String goods_code, String goods_name, String kind, String goods_price, String goods_stock) {
+	public goods(String goods_code, String goods_name, String kind, String goods_price, String goods_stock) {
 		this.goods_code = goods_code;
 		this.goods_name = goods_name;
 		this.kind = kind;

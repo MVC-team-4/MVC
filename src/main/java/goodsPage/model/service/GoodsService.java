@@ -6,34 +6,34 @@ import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import goodsPage.model.dao.GoodsDao;
-import goodsPage.model.dto.Goods;
+import goodsPage.model.dao.goodsDao;
+import goodsPage.model.dto.goods;
 
-public class GoodsService {
+public class goodsService {
 	
-	GoodsDao dao;
+	goodsDao dao;
 
-	public GoodsService(GoodsDao dao) {
+	public goodsService(goodsDao dao) {
 		super();
 		this.dao = dao;
 	}
 	
 	//상품 등록 서비스
-	public void regGoods(Goods goods) {
+	public void regGoods(goods goods) {
 		dao.insertGoods(goods);
 	}
 	
 	//상품 전체 조회 서비스
-	public ArrayList<Goods> goodsSelectAll() {
+	public ArrayList<goods> goodsSelectAll() {
 		return dao.selectGoods();
 	}
 	
 	//상품 전체 조회 JSON 데이터
 	public String getJson() {
-		ArrayList<Goods> list = dao.selectGoods();
+		ArrayList<goods> list = dao.selectGoods();
 		
 		JSONArray jArray = new JSONArray();
-		for(Goods goods : list) {
+		for(goods goods : list) {
 			JSONObject json = new JSONObject();
 			json.put("kind", goods.getKind());
 			json.put("goods_code", goods.getGoods_code());
@@ -48,12 +48,12 @@ public class GoodsService {
 	}
 	
 	//상품 하나 조회 서비스
-	public Goods selectOneGoods (String update_code){
+	public goods selectOneGoods (String update_code){
 		return dao.selectOneGoods(update_code);
 	}
 	
 	//상품 수정 서비스
-	public void updateGoods (Goods updateGoods){
+	public void updateGoods (goods updateGoods){
 		dao.updateGoods(updateGoods);
 	}
 	
@@ -64,8 +64,8 @@ public class GoodsService {
 	
 	//콘솔 테스트
 	public static void main(String[] args) {
-		GoodsService service = new GoodsService(new GoodsDao());
-		Goods goodsdata = new Goods("0001","블랑","맥주","3500","9999");
+		goodsService service = new goodsService(new goodsDao());
+		goods goodsdata = new goods("0001","블랑","맥주","3500","9999");
 		service.regGoods(goodsdata);
 	}
 

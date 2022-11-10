@@ -1,52 +1,52 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <% String path = request.getContextPath(); %>
 <link href="<%=path %>/css/navcss.css" rel= "stylesheet" type="text/css">
 </head>
 <body>
-	<div id="body-wrapper">
+<div id="body-wrapper">
 		<div id="body-content">
 			<div class="dropmenu">
 			    <ul class="aa">
 			        <li class="bb">
 			
-			            <div class="item">�ַ�
-			                <!--����޴�-->
+			            <div class="item">주류
+			                <!--숨김메뉴-->
 			                <div class="item_list">
-			                    <div class="item_a">����Ű
+			                    <div class="item_a">위스키
 			                        <div class="drop">
-			                            <p><a href="">�߷�Ÿ�� 30��</a></p>
-			                            <p><a href="">�۷����� �ñ׳�</a></p>
-			                            <p><a href="">�Ƶ庤</a></p>
-			                            <p><a href="">���Ͽ�Ŀ</a></p>
+			                            <p><a href="">발렌타인 30년</a></p>
+			                            <p><a href="">글렌모렌지 시그넷</a></p>
+			                            <p><a href="">아드벡</a></p>
+			                            <p><a href="">조니워커</a></p>
 			                        </div>
 			                    </div>
-			                    <div class="item_a">����
+			                    <div class="item_a">와인
 			                        <div class="drop">
-			                            <p><a href="">�ξ� �帶����</a></p>
-			                            <p><a href="">���� ������ 2015</a></p>
-			                            <p><a href="">��ÿ��� �� ��ƺ���</a></p>
+			                            <p><a href="">로얄 드마리아</a></p>
+			                            <p><a href="">샤또 몽로즈 2015</a></p>
+			                            <p><a href="">까시예로 델 디아블로</a></p>
 			                        </div>
 			                    </div>
-			                    <div class="item_a">������
+			                    <div class="item_a">샴페인
 			                        <div class="drop">
-			                            <p><a href="">�� ����</a></p>
-			                            <p><a href="">���丮��</a></p>
-			                            <p><a href="">ũ���</a></p>
-			                            <p><a href="">�ƺ�Ŭ����</a></p>
+			                            <p><a href="">모엣 샹동</a></p>
+			                            <p><a href="">돔페리뇽</a></p>
+			                            <p><a href="">크루그</a></p>
+			                            <p><a href="">뵈브클리코</a></p>
 			                        </div>
 			                    </div>
-			                    <div class="item_a">����
+			                    <div class="item_a">맥주
 			                        <div class="drop">
-			                            <p><a href="">��׽�</a></p>
-			                            <p><a href="">���� ����Ʈ</a></p>
-			                            <p><a href="">���̳���</a></p>
-			                            <p><a href="">�ڷγ�</a></p>
+			                            <p><a href="">기네스</a></p>
+			                            <p><a href="">버드 라이트</a></p>
+			                            <p><a href="">하이네켄</a></p>
+			                            <p><a href="">코로나</a></p>
 			                        </div>
 			                    </div>
 			                </div>
@@ -54,21 +54,21 @@
 			            
 			        </li>
 			        <li class="bb">
-			            <div class="item"><a>��ǰ ��ȸ</a>
+			            <div class="item"><a>상품 조회</a>
 			            </div>
 			        </li>
 			    	<li class="bb">
-			            <div class="item"><a>���� ��ȸ</a>
+			            <div class="item"><a>고객 조회</a>
 			            </div>
 			        </li>
 			       	<li class="bb">
-			            <div class="item"><a>�Ǹ� ����</a>
+			            <div class="item"><a>판매 내역</a>
 							<div class="item_sell">
-			                    <div class="item_a">��ȸ ���
+			                    <div class="item_a">조회 방법
 			                        <div class="drop">
-			                            <p><a href="">��ü</a></p>
-			                            <p><a href="">��¥</a></p>
-			                            <p><a href="">��ǰ�ڵ�</a></p>
+			                            <p><a href="">전체</a></p>
+			                            <p><a href="">날짜</a></p>
+			                            <p><a href="">상품코드</a></p>
 			                            <p><a href="">ID</a></p>
 			                        </div>
 			                    </div>

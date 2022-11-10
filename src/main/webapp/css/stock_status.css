@@ -3,8 +3,10 @@
 	width: 500px;
     padding: 10px;
     margin: 10px auto;
+    margin-left: 55%;
+    margin-top: -15%;
 }
-.stock-wrap h2{
+.stock-wrap h3{
 	margin: 20px 10px;
 }
 table{
@@ -37,6 +39,6 @@ table{
 }
 #stock_tbl tbody{
     display:block;
-    height: 194px;
+    height: 200px;
     overflow: auto;
 }

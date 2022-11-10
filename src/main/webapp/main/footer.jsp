@@ -65,7 +65,7 @@
 </style>
 </head>
 <body>
-     	<!--footer영역-->
+<!--footer영역-->
         <div>
             <footer>
                 <div class="inner_footer">

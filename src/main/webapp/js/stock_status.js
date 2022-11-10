@@ -1,8 +1,6 @@
-/**
- * 
- */
- function goods(){
-        //alert("load 완료");
+function goods(){
+        alert("load 완료");
+        //console.log("완료");
         $.ajax(
             {
                 type:"post",
@@ -17,7 +15,7 @@
                     console.log(goodsList[3].goods_name);
                     console.log(goodsList[4].goods_name);
 
-                    let table = $("#stock_tbl");
+                   let table = $("#stock_tbl");
                     for(let i=0; i<goodsList.length; i++){
                         console.log(i);
                         console.log(goodsList[i].kind);
@@ -29,12 +27,14 @@
                             <td> ${goodsList[i].goods_stock} </td>
                             </tr>`);
                     }
+                    
+                    
                 },
                 error:function(data, textStatus){
 				alert("오류 발생");
                 },
                 complete:function(data, textStatus){
-                    //alert("done"); 
+                    alert("done"); 
                 }
             }
         );

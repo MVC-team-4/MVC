@@ -8,9 +8,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import goodsPage.model.dto.Goods;
+import goodsPage.model.dto.goods;
 
-public class GoodsDao {
+public class goodsDao {
 	
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -34,7 +34,7 @@ public class GoodsDao {
 	}//
 	
 	//테이블에 상품 등록
-	public void insertGoods(Goods goods) {
+	public void insertGoods(goods goods) {
 		//디비 연결
 		dbCon();
 		String sql = "INSERT INTO goods_list VALUES(?,?,?,?,9999)";
@@ -56,8 +56,8 @@ public class GoodsDao {
 	
 	
 	//상품 테이블 조회
-	public ArrayList<Goods> selectGoods(){
-		ArrayList<Goods> list = new ArrayList<>();
+	public ArrayList<goods> selectGoods(){
+		ArrayList<goods> list = new ArrayList<>();
 		dbCon();
 		String sql ="SELECT * FROM goods_list";
 		try {
@@ -74,7 +74,7 @@ public class GoodsDao {
 				String goods_price = rs.getString(4);
 				String goods_stock = rs.getString(5);
 
-				Goods g = new Goods();
+				goods g = new goods();
 				g.setGoods_code(goods_code);
 				g.setGoods_name(goods_name);
 				g.setKind(kind);
@@ -94,9 +94,9 @@ public class GoodsDao {
 	}//
 	
 	//물품코드로 하나의 상품정보 조회
-	public Goods selectOneGoods(String update_code){
+	public goods selectOneGoods(String update_code){
 		dbCon();
-		Goods g =null;
+		goods g =null;
 		String sql ="SELECT * FROM goods_list WHERE goods_code = ?" ;
 		try {
 			PreparedStatement pst  = con.prepareStatement(sql);
@@ -110,7 +110,7 @@ public class GoodsDao {
 				//int goods_stock = Integer.parseInt(rs.getString(5));
 				String goods_price = rs.getString(4);
 				String goods_stock = rs.getString(5);
-				g = new Goods();
+				g = new goods();
 				g.setGoods_code(update_code);
 				g.setGoods_name(goods_name);
 				g.setKind(kind);
@@ -128,7 +128,7 @@ public class GoodsDao {
 	}//
 	
 	//상품 데이터 수정
-	public void updateGoods(Goods updateGoods){
+	public void updateGoods(goods updateGoods){
 		dbCon();
 		String sql ="UPDATE goods_list SET goods_name = ?, kind = ?, goods_price = ?, goods_stock = ? WHERE goods_code = ?" ;
 		try {
@@ -165,7 +165,7 @@ public class GoodsDao {
 
 	//콘솔 테스트
 	public static void main(String[] args) {
-		GoodsDao dao = new GoodsDao();
+		goodsDao dao = new goodsDao();
 		dao.dbCon();
 		System.out.println(dao.selectOneGoods("00000005"));
 	}

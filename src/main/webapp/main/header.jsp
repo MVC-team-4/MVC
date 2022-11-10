@@ -5,7 +5,6 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-
 <style type="text/css">
        h2 {
 		  position: relative;
@@ -92,7 +91,7 @@
 </style>
 </head>
 <body>
-    <header>
+ <header>
     	<div class="head">
     	     <h2>Acorn Liquor</h2> 	
     	</div>

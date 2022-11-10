@@ -1,5 +1,5 @@
 @charset "UTF-8";
-	#body-wrapper {
+#body-wrapper {
 	    position: relative;
 	    z-index:5;
 	}
@@ -103,4 +103,3 @@
 	    border:1px;
 	    text-decoration:none;
 	}
-	
