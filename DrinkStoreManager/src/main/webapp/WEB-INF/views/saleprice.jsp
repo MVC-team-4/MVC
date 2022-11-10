@@ -31,7 +31,7 @@ String total_price = (String)request.getAttribute("totalprice");
 
 <caption>
 <h3>판매금액</h3>
-날짜 : <input type="text" id="day">
+날짜 : <input type="text" id="day" placeholder="0000-00-00">
 <button onclick="find()">검색</button>
 </caption>
 

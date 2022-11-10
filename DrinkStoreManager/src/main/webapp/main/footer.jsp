@@ -25,7 +25,6 @@
 	}
 	footer .inner_footer{
 	    padding: 15px 0 20px;
-	    border-top: 1px solid #dddfe0;
 	    font-size: 13px;
 	    overflow:auto;
 	}

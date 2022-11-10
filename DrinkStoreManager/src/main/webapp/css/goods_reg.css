@@ -10,11 +10,13 @@ section{
 .goodsReg-wrap{
 	width: 700px;
 	height: 400px;
+	margin: 0 auto;
 	border: 1px solid rgb(237, 240, 245);
+	margin-bottom:300px;
 }
 h3{
 	margin: 20px 0;
-	/* text-align: center; */
+	text-align: center;
 }
 form{
 	padding: 10px;

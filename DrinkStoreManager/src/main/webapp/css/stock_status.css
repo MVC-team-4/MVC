@@ -31,6 +31,6 @@ table{
 }
 #stock_tbl tbody{
     display:block;
-    height: 194px;
+    height: 265px;
     overflow: auto;
 }

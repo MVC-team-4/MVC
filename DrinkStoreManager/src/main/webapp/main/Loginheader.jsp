@@ -77,34 +77,14 @@
 	    margin-right: 15px;
 	    text-align: right;
 	}
-	.welcome{
-		font-weight: bold;
-		font-size: 18px;
-	}
-	.log_info nav{
-		font-size: 13px;
-		margin-top:5px;
-	}
-	.log_info nav a{
-		text-decoration: none;
-		color:black;
-	}
-	.log_info nav a:hover{
-		color:purple;
-	}
 </style>
 </head>
 <body>
     <header>
     	<div class="head">
-    	     <a href="main.jsp"> <h2>Acorn Liquor</h2> </a>	
+    	     <a href="staffLogin.jsp"> <h2>Acorn Liquor</h2> </a>	
     	</div>
-    	<div class="log_info">
-					<div class="welcome">환영합니다.</div>
-					<nav>
-						<div><a href="staffLogin.jsp">로그아웃</a></div>
-					</nav>
-				</div>
+
     </header>
 </body>
 </html>

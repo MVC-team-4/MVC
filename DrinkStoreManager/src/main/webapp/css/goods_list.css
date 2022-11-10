@@ -2,7 +2,7 @@
 
 section{
 	width: 80%;
-	height: 1000px;
+	height: 700px;
 	margin: 0 auto;
 }
 #title_wrap{
@@ -47,12 +47,12 @@ section{
 	border-collapse: collapse;
 }
 #table_wrap th{
-	font-size: 12px;
+	font-size: 15px;
 	height: 30px;
 	background-color: rgb(249, 249, 249);
 }
 #table_wrap tr{
-	font-size: 12px;
+	font-size: 15px;
 }
 #table_wrap td:nth-child(n+1):nth-child(-n+3){
 	text-align: center;
@@ -69,4 +69,7 @@ section{
 a{
 	color: black;
 	text-decoration: none;
+}
+a:hover {
+	color:purple;
 }

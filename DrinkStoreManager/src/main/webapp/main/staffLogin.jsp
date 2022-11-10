@@ -15,6 +15,7 @@ main{
             height: 450px;
             background-color: #eee;
             margin-top: 100px;
+            margin-bottom: 130px;
         }
         .log_title{
             text-align: center;
@@ -55,7 +56,7 @@ main{
 </head>
 <body>
     <header>
-		<jsp:include page="/main/header.jsp"></jsp:include>
+		<jsp:include page="/main/Loginheader.jsp"></jsp:include>
     </header>
 	<main>
 	       <div class="log_title">
