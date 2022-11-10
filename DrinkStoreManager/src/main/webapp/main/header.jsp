@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 
 <style type="text/css">
@@ -97,9 +97,9 @@
     	     <h2>Acorn Liquor</h2> 	
     	</div>
     	<div class="log_info">
-					<div class="welcome">ȯ���մϴ�.</div>
+					<div class="welcome">환영합니다.</div>
 					<nav>
-						<div><a href="staffLogin.jsp">�α׾ƿ�</a></div>
+						<div><a href="staffLogin.jsp">로그아웃</a></div>
 					</nav>
 				</div>
     </header>
