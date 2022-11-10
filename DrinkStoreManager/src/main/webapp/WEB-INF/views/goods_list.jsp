@@ -18,6 +18,8 @@
 	ArrayList<Goods> list =(ArrayList<Goods>)request.getAttribute("list");
 %>
 <body>
+<jsp:include page="/main/header.jsp"></jsp:include>
+<jsp:include page="/main/nav.jsp"></jsp:include>
 	<section>
 		<div id="title_wrap">
 			<div id="title">목록(총 <span><%= list.size() %></span>개)</div>
@@ -60,5 +62,6 @@
 			</table>
 		</div>
 	</section>
+<jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
 </html>

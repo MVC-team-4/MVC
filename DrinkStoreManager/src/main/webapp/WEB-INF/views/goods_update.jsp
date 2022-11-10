@@ -14,6 +14,8 @@ String path =  request.getContextPath();
 <link href="<%=path%>/css/goods_update.css" rel="stylesheet">
 </head>
 <body>
+<jsp:include page="/main/header.jsp"></jsp:include>
+<jsp:include page="/main/nav.jsp"></jsp:include>
 <%
 	Goods goods =(Goods)request.getAttribute("goods");
 %>
@@ -71,5 +73,6 @@ String path =  request.getContextPath();
           </table>
         </form>
 	</section>
+<jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
 </html>

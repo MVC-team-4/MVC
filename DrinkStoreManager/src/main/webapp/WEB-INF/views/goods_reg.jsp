@@ -13,6 +13,8 @@ String path =  request.getContextPath();
 <link href="<%=path%>/css/goods_reg.css" rel="stylesheet">
 </head>
 <body>
+<jsp:include page="/main/header.jsp"></jsp:include>
+<jsp:include page="/main/nav.jsp"></jsp:include>
 	<section>
     <div class="goodsReg-wrap">
     	<form action="goods-reg.do" method="post">
@@ -60,5 +62,6 @@ String path =  request.getContextPath();
         </form>
     </div>
 	</section>
+<jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
 </html>
