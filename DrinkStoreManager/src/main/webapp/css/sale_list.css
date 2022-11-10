@@ -1,5 +1,9 @@
 @charset "EUC-KR";
 
+section{
+	margin-top: -10%;
+}
+
 table{
 	width:1000px;
 	margin:0px auto;
