@@ -6,21 +6,11 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <% String path = request.getContextPath(); %>
-<link href="<%=path %>/css/maincss.css" rel= "stylesheet" type="text/css">
+<link href="<%=path %>/css/navcss.css" rel= "stylesheet" type="text/css">
 </head>
 <body>
 	<div id="body-wrapper">
 		<div id="body-content">
-		    <header>
-				<jsp:include page="/main/header.jsp"></jsp:include>
-		
-				<div class="log_info">
-					<div class="welcome">환영합니다.</div>
-					<nav>
-						<div><a href="staffLogin.jsp">로그아웃</a></div>
-					</nav>
-				</div>
-		    </header>
 			<div class="dropmenu">
 			    <ul class="aa">
 			        <li class="bb">
@@ -88,9 +78,6 @@
 			    </ul>
 			</div>
 		</div>
-		<footer>
-		<jsp:include page="/main/footer.jsp"></jsp:include>
-		</footer>
 	</div>
 </body>
 </html>

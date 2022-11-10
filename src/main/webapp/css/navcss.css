@@ -1,23 +1,19 @@
 @charset "UTF-8";
+	#body-wrapper {
+	    position: relative;
+	    z-index:5;
+	}
+	
+	#body-content {
+	    margin-top: 5px;
+	    padding-bottom: 140px;
+	}
  html, body{
 	    margin: 0;
 	    padding: 0;
 	    height: 100%;
 	}
-	.log_info{
-		float: right;
-		margin-top: -100px;
-	    margin-right: 15px;
-	    text-align: right;
-	}
-	.welcome{
-		font-weight: bold;
-		font-size: 18px;
-	}
-	.log_info nav{
-		font-size: 13px;
-		margin-top:5px;
-	}
+
 	.dropmenu{
 	    background-color: rgb(145, 145, 145);
 	    margin-top: 20px;
@@ -106,14 +102,5 @@
 	    color: #ffffff;
 	    border:1px;
 	    text-decoration:none;
-	}
-	#body-wrapper {
-	    min-height: 100%;
-	    position: relative;
-	}
-	
-	#body-content {
-	    margin-top: 5px;
-	    padding-bottom: 140px;
 	}
 	

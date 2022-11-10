@@ -6,14 +6,19 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+ html, body{
+	    margin: 0;
+	    padding: 0;
+	    height: 100%;
+	}
 	footer{
+		position: absolute;
+	    bottom: 0;
+	    left: 0;
 	    width: 100%;
 	    height:140px;
 	    border-top: 1.5px solid #c50000;
-	    position: absolute;
-	    bottom: 0;
-	    left: 0;
-	    margin-top: 10px;
+	
 	}
 	footer div{
 	    display: block;
@@ -22,6 +27,7 @@
 	    padding: 15px 0 20px;
 	    border-top: 1px solid #dddfe0;
 	    font-size: 13px;
+	    overflow:auto;
 	}
 	footer .inner_footer .provision{
 	    text-align: center;

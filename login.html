@@ -51,12 +51,39 @@
             border-radius: 15px;
             cursor: pointer;
         }
+        .log_info{
+		float: right;
+		margin-top: -100px;
+	    margin-right: 15px;
+	    text-align: right;
+	}
+	.welcome{
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.log_info nav{
+		font-size: 13px;
+		margin-top:5px;
+	}
+	.log_info nav a{
+		text-decoration: none;
+		color:black;
+	}
+	.log_info nav a::after{
+		color:purple;
+	}
     </style>
 </head>
 <body>
     <header>
       <h2>4조 스마트스토어</h2>
-      <hr>
+      <hr>				
+      <div class="log_info">
+        <div class="welcome">환영합니다.</div>
+        <nav>
+            <div><a href="staffLogin.jsp">로그아웃</a></div>
+        </nav>
+    </div>
     </header>
 
     <main>

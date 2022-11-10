@@ -68,6 +68,27 @@
 		h1:after {
 		  background-color: #c50000;
 		}
+			.log_info{
+		float: right;
+		margin-top: -100px;
+	    margin-right: 15px;
+	    text-align: right;
+	}
+	.welcome{
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.log_info nav{
+		font-size: 13px;
+		margin-top:5px;
+	}
+	.log_info nav a{
+		text-decoration: none;
+		color:black;
+	}
+	.log_info nav a:hover{
+		color:purple;
+	}
 </style>
 </head>
 <body>
@@ -75,6 +96,12 @@
     	<div class="head">
     	     <h2>Acorn Liquor</h2> 	
     	</div>
+    	<div class="log_info">
+					<div class="welcome">환영합니다.</div>
+					<nav>
+						<div><a href="staffLogin.jsp">로그아웃</a></div>
+					</nav>
+				</div>
     </header>
 </body>
 </html>
