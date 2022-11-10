@@ -6,7 +6,6 @@
 	
 	#body-content {
 	    margin-top: 5px;
-	    padding-bottom: 140px;
 	}
  html, body{
 	    margin: 0;
@@ -38,13 +37,14 @@
 	    margin-right: 15px;
 	    font-size: 17px;
 	    cursor:pointer;
-	    height: 100px;
 	}
 	
 	.bb .item_list, .bb .item_sell{
 	    display:none;
 	}
-	
+	.bb:hover .item{
+		height: 100px;
+	}
 	.bb:hover .item_list{
 	    display:flex;
 	    flex-wrap: wrap;
@@ -52,9 +52,10 @@
 	    left:0px;
 	    width:680px;
 	    height:180px;
-	    background-color: white;
+	    background-color: rgba(0,0,0,0);
 	    margin-top: 7px;
 	    margin-left: 50px;
+	    list-style: none;
 	}
 	.bb:hover .item_sell{
 	    position: absolute;
@@ -63,7 +64,7 @@
 	    flex-wrap: wrap;
 	    width:680px;
 	    height:180px;
-	    background-color: white;
+	    background-color: rgba(0,0,0,0);
 	    margin-top: 7px;
 	    margin-left: 50px;
 	}
@@ -71,7 +72,6 @@
 	.bb:hover .bb{
 	    border-bottom: 2px solid black;
 	}
-	
 	.bb .item_list .item_a,.bb .item_sell .item_a{
 	    font-size: 15px;
 	    font-weight: bold;
@@ -81,9 +81,12 @@
 	    flex-wrap: wrap;
 	    margin-right: 20px;
 	    width:150px;
-	    height: 180px;
+	    height: 175px;
 	    text-decoration:none;
 	    background-color: #f0f0f0;
+	}
+	.bb .item_sell .item_a{
+		height: 210px;
 	}
 	
 	

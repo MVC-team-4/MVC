@@ -8,7 +8,7 @@
 
 <style type="text/css">
        h2 {
-		  position: relative;
+		  /* position: relative; */
 		  padding: 0;
 		  margin: 0;
 		  font-family: "Raleway", sans-serif;
@@ -94,7 +94,7 @@
 <body>
     <header>
     	<div class="head">
-    	     <h2>Acorn Liquor</h2> 	
+    	     <a href="main.jsp"> <h2>Acorn Liquor</h2> </a>	
     	</div>
     	<div class="log_info">
 					<div class="welcome">환영합니다.</div>
