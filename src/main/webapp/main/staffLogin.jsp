@@ -60,8 +60,9 @@ main{
 	<main>
 	       <div class="log_title">
 	           <a>임직원 로그인</a>
+	           <%String path = request.getContextPath(); %>
 	       </div>
-	      <form  action="login"  method="post">
+	      <form  action="<%=path %>/login"  method="post">
 	      <div class="login_div">
 	        <div class="login_info">
 	            <label for="id">아이디</label>
