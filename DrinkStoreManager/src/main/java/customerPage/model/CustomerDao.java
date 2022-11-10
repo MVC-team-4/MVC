@@ -15,8 +15,7 @@ public class CustomerDao {
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String url="jdbc:oracle:thin:@localhost:1521:xe";
 	String user="system";
-	//String password="oracle";
-	String password="oracle";
+	String password="1234";
 	Connection con = null;
 
 	//
