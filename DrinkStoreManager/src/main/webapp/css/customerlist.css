@@ -7,8 +7,9 @@
 
 .wrap{
     padding : 20px;
-    margin:0 auto;
+    margin:30px auto;
     width: 1200px;
+    margin-bottom:70px;
 }
 
 
@@ -20,32 +21,34 @@ h3{
 .table{
     width: 1000px;
     margin: 0 auto;
-    border: 3px solid #000000;
-    text-align: left;
+    border: 1px solid  #888;
+    text-align: center;
     border-collapse: collapse;
 }
 .tbID, .tbNAME, .tbADDRESS, .tbPHONENUM, .tbGRADE{
-	font-size : 28px;
-	border: 1px solid #000000;
+	border: 1px solid #888;
 	text-align: center;
 	font-weight: bold;
-	background: #CFCFCF;
+	background: #f0f0f0;
 	width: 200px;
 	height: 40px;
 	border-collapse: collapse;
 }
 
 .tbid, .tbname, .tbaddress, .tbphonenum, .tbgrade{
-	border: 1px solid #000000;
+	border: 1px solid #888;
 	width: 200px;
 	height: 40px;
 	border-collapse: collapse;
-	font-size : 20px;
 }
 .tr{
 	display: flex;
 }
 .tr_body{
 	display: flex;
+}
+
+.tbody:nth-child(2n+1) div{
+    background-color: #f0f0f0;
 }
 

@@ -23,11 +23,15 @@ caption{
 	margin:50px auto;
 }
 
+tbody tr:nth-child(2n+1){
+    background-color: #f0f0f0;
+}
 .f td{
-	background-color: #eeeeee;
 	font-weight: bold;
 	height: 50px;
 }
+
+
 
 input{
 	width:180px;
