@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 <% String path = request.getContextPath(); %>
 <link href="<%=path %>/css/navcss.css" rel= "stylesheet" type="text/css">
+<style type="text/css">
+a{
+		text-decoration:none;
+		color:black;
+	}
+</style>
 </head>
 <body>
 	<div id="body-wrapper">
@@ -54,7 +60,11 @@
 			            
 			        </li>
 			        <li class="bb">
-			            <div class="item"><a>상품 조회</a>
+			            <div class="item"><a href="/DrinkStoreManager/goods-reg.do">상품 등록</a>
+			            </div>
+			        </li>
+			        <li class="bb">
+			            <div class="item"><a href="/DrinkStoreManager/goods-list.do">상품 조회</a>
 			            </div>
 			        </li>
 			    	<li class="bb">

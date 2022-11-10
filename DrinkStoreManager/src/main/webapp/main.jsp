@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ACORN LIQUOR</title>
 <style>
 .main{
 position:relative;
@@ -53,8 +53,6 @@ margin-left: 21%;
 #qtt_wrap{
 	width: 25%;
 	margin: -282px 57% 100px;
-	border: 1px solid rgb(237, 240, 245);
-	background-color: green;
 }
 #qtt_wrap p{
 margin-left: 25px;
@@ -120,20 +118,8 @@ margin-bottom:10px;
             </div>
             
             <div id="qtt_wrap">
-            	<table id="qtt_content">
-            		<tr><p>재고 현황</p>
-            			<th>No.</th>
-            			<th>종류</th>
-            			<th>상품이름</th>
-            			<th>재고</th>
-            		</tr>
-					<tr>
-						<td>1</td>
-						<td>1</td>
-						<td>1</td>
-						<td>1</td>
-					</tr>
-            	</table>
+            <jsp:include page="/main/stock_status.jsp"></jsp:include>
+            	
             </div>
         </main>
     </div>
