@@ -14,17 +14,13 @@
 <link href="<%=path%>/css/header.jsp">
 </head>
 <body>
-
+<jsp:include page="/main/header.jsp"></jsp:include>
+<jsp:include page="/main/nav.jsp"></jsp:include>
 <%
 ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 %>
 	<form action="customer" method="post">
-		<header>
-	    	<div class="head">
-	    	     <h2>Acorn Liquor</h2> 	
-	    	</div>
-	    </header>
-	    
+			    
 	    <div class="wrap">
 	
 	    	<h2> 고객 정보 조회 </h2>
@@ -60,5 +56,7 @@ ArrayList<Customer> list = (ArrayList<Customer>)request.getAttribute("list");
 	    </div>
     
     </form>
+    
+    <jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
 </html>
