@@ -56,7 +56,7 @@ String path =  request.getContextPath();
             <tr>
               <td colspan="2">
                 <button>등록</button>
-                <input type="reset" value="취소">
+                <input class="cancel" type="reset" value="취소">
               </td>
             </tr>
           </table>
