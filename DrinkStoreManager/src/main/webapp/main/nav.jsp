@@ -64,7 +64,7 @@
                     <a href="/DrinkStoreManager/Customerlist">고객 조회</a>
                 </li>
                 <li>
-                    <a href="/DrinkStoreManager/Customerupdate">고객 등급관리</a>
+                    <a href="/DrinkStoreManager/CustomerGrade">고객 등급관리</a>
                 </li>
             </ul>
         </ul>
