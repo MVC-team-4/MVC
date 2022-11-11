@@ -4,9 +4,11 @@
 	padding: 0px;
 	margin: 0px;
 }
-
+form{
+	background-color: white;
+    padding : 50px 0;
+}
 .wrap{
-    padding : 20px;
     margin: 0 auto;
     width: 1200px;
     margin-bottom:100px;
