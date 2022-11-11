@@ -46,9 +46,11 @@ h3{
 }
 .tr{
 	display: flex;
+	line-height: 40px;
 }
 .tr_body{
 	display: flex;
+	line-height: 40px;
 }
 
 .tbody:nth-child(2n+1) div{

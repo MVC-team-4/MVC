@@ -22,6 +22,10 @@ h3{
 }
 .thead{
     border-bottom: 1px solid black;
+    line-height: 50px;
+}
+.gradename, .gradebenefits{
+	line-height: 50px;
 }
 .gradeName, .gradeCondition{
     border-right: 1px solid black;
