@@ -1,27 +1,25 @@
 /**
  * 
  */
- function goods(){
+ function sales(){
         //alert("load 완료");
         $.ajax(
             {
                 type:"post",
                 dataType:"json",
-                url:"/DrinkStoreManager/goodsJson",
+                url:"/DrinkStoreManager/newSale",
                 success:function(data, textStatus){
                     console.log(data);
-                    let goodsList = data.goodsData;
-                    let table = $("#stock_tbody");
-                    for(let i=0; i<goodsList.length; i++){
+                    let newSales = data.newSales;
+                    let table = $("#newsale_tbody");
+                    for(let i=0; i<newSales.length; i++){
                         console.log(i);
-                        console.log(goodsList[i].kind);
                         table.append(
 						`<tr> 
-                            <td> ${i+1} </td>
-                            <td> ${goodsList[i].kind}</td> 
-                            <td> ${goodsList[i].goods_code} </td>
-                            <td> ${goodsList[i].goods_name} </td>
-                            <td> ${goodsList[i].goods_stock} </td>
+                            <td> ${newSales[i].sale_code} </td>
+                            <td> ${newSales[i].kind}</td> 
+                            <td> ${newSales[i].goods_name} </td>
+                            <td> ${newSales[i].the_number} </td>
                         </tr>`);
                     }
                 },
@@ -35,4 +33,4 @@
         );
     }
 
-    $(document).ready(goods());
+    $(document).ready(sales());
