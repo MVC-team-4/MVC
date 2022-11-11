@@ -15,7 +15,7 @@
 <jsp:include page="/main/nav.jsp"></jsp:include>
 
 <section>
-	<form>
+	<form action="CustomerGrade" method="post">
         <div class="wrap">
             <h3> 고객 등급 관리 </h3>
             <div class="table">
@@ -36,7 +36,7 @@
                         <div class="gradename">VVIP</div>
                         <div class="gradecondition">
                             구매금액
-                            <input type="text" class="text">이상
+                            <input type="text" class="text" name="vvip">이상
                         </div>
                         <div class="gradebenefits"> 10% 적립</div>
                     </div>
@@ -45,7 +45,7 @@
                         <div class="gradename">VIP</div>
                         <div class="gradecondition">
                             구매금액
-                            <input type="text" class="text">이상
+                            <input type="text" class="text" name="vip">이상
                         </div>
                         <div class="gradebenefits"> 5% 적립</div>
                     </div>
@@ -54,7 +54,7 @@
                         <div class="gradename">GOLD</div>
                         <div class="gradecondition">
                             구매금액
-                            <input type="text" class="text">이상
+                            <input type="text" class="text" name="gold">이상
                         </div>
                         <div class="gradebenefits"> 3% 적립</div>
                     </div>
@@ -69,6 +69,7 @@
             </div>
 
         </div>
+        <button>저장</button>
     </form>
 </section>
 
