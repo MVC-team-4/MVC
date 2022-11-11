@@ -4,9 +4,11 @@
 	padding: 0px;
 	margin: 0px;
 }
-
+form{
+	background-color: white;
+    padding : 50px 0;
+}
 .wrap{
-    padding : 20px;
     margin: 0 auto;
     width: 1200px;
     margin-bottom:100px;
@@ -25,6 +27,7 @@ h3{
     text-align: center;
     border-collapse: collapse;
 }
+
 .tbID, .tbNAME, .tbADDRESS, .tbPHONENUM, .tbGRADE{
 	border: 1px solid #888;
 	text-align: center;

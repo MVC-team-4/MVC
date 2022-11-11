@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
 .wrap{
+	width: 800px;
+	padding-top: 30px;
     margin: 0 auto;
     text-align: center;
+    background-color: white;
 }
 .tr{
     display: flex;
