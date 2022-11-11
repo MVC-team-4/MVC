@@ -26,7 +26,7 @@
                     관리자 님
                 </div>
                 <div class="login-logo">
-                    <a href="#">로그아웃</a>
+                    <a href="/DrinkStoreManager/main/staffLogin.jsp">로그아웃</a>
                 </div>
             </div>
         </div>
