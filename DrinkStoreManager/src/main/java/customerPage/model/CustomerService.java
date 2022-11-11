@@ -11,7 +11,7 @@ public class CustomerService {
 		this.dao = dao;
 		dao2 = new CustomerGradeDao();
 	}
-	
+		
 	public ArrayList<Customer> selectAll(){
 		ArrayList<Customer> list = dao.customers();
 		return list;
