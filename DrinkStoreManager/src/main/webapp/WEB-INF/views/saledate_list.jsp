@@ -27,11 +27,12 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 %>
 
 <section>
+<div class="wrap">
 <table>
 
 <caption>
 <h3>날짜별 조회</h3>
-날짜 : <input type="text" id="date" placeholder="0000-00-00">
+날짜: <input type="text" id="date" placeholder="0000-00-00">
 <button onclick="find()">검색</button>
 </caption>
 
@@ -55,6 +56,7 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 </tr>
 <%} %>
 </table>
+</div>
 </section>
 
 <jsp:include page="/main/footer.jsp"></jsp:include>

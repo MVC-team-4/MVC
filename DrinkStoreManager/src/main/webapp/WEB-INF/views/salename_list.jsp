@@ -26,11 +26,12 @@ function find(){
 ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 %>
 <section>
+<div class="wrap">
 <table>
 
 <caption>
 <h3>아이디별 조회</h3>
-아이디 : <input type="text" id="name">
+아이디: <input type="text" id="name">
 <button onclick="find()">검색</button>
 </caption>
 
@@ -53,6 +54,7 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 </tr>
 <%} %>
 </table>
+</div>
 </section>
 
 <jsp:include page="/main/footer.jsp"></jsp:include>

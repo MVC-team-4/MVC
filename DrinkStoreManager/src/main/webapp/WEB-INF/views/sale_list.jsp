@@ -24,7 +24,7 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 String total_price = (String)request.getAttribute("totalprice");
 %>
 
-
+<div class="wrap">
 <table>
 
 <caption>
@@ -60,4 +60,5 @@ String total_price = (String)request.getAttribute("totalprice");
 
 <jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
+</div>
 </html>
