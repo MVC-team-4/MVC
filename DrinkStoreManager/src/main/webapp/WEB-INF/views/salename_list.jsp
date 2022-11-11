@@ -30,7 +30,7 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 
 <caption>
 <h3>아이디별 조회</h3>
-아이디 : <input type="text" id="name">
+아이디: <input type="text" id="name">
 <button onclick="find()">검색</button>
 </caption>
 
