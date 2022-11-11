@@ -11,7 +11,7 @@
                 success:function(data, textStatus){
                     console.log(data);
                     let newSales = data.newSales;
-                    let table = $("#stock_tbl");
+                    let table = $("#newsale_tbody");
                     for(let i=0; i<newSales.length; i++){
                         console.log(i);
                         table.append(

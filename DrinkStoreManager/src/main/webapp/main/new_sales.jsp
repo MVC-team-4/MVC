@@ -17,7 +17,7 @@ String path =  request.getContextPath();
 <body>
 
     <h3>신규 주문</h3>
-    <table id="stock_tbl">
+    <table id="newsale_tbl">
         <thead>
             <tr>
                 <th>판매코드</th>
@@ -26,7 +26,7 @@ String path =  request.getContextPath();
                 <th>개수</th>
             </tr>
         </thead>
-        <tbody id="stock_tbody">
+        <tbody id="newsale_tbody">
             
         </tbody>
         

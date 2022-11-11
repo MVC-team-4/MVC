@@ -19,35 +19,7 @@
 <section>
     <div class="section1">
         <div class="order-wrap">
-            <h3>신규 주문 (11월 10일)</h3>
-            <table class="new_order">
-            	<thead>
-            		<tr>
-            			<th> No </th>
-            			<th> 상품명 </th>
-            			<th> 갯수 </th>
-            		</tr>
-            	</thead>
-            		<tbody>
-            			<tr>
-            			<td>1</td>
-            			<td>조니워커</td>
-            			<td>4병</td>
-            			</tr>
-            			
-            			<tr>
-            			<td>2</td>
-            			<td>돔페리뇽</td>
-            			<td>2병</td>
-            			</tr>
-            			
-            			<tr>
-            			<td>3</td>
-            			<td>발렌타인 30년</td>
-            			<td>1병</td>
-            			</tr>
-            		</tbody>
-            </table>
+            <jsp:include page="/main/new_sales.jsp"></jsp:include>
         </div>
         <div class="sales-wrap">
         	<h3>매출 통계</h3>

@@ -11,7 +11,7 @@
                 success:function(data, textStatus){
                     console.log(data);
                     let goodsList = data.goodsData;
-                    let table = $("#stock_tbl");
+                    let table = $("#stock_tbody");
                     for(let i=0; i<goodsList.length; i++){
                         console.log(i);
                         console.log(goodsList[i].kind);
