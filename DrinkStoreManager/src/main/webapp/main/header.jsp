@@ -15,7 +15,7 @@
         <div class="header">
             <div class="header-title">
                 <div class="logo">
-                    <a href="#"> NAVER </a>
+                    <a href="#"> NEVER </a>
                 </div>
                 <div class="title-logo">
                     <a href="/DrinkStoreManager/main">스마트스토어센터</a>

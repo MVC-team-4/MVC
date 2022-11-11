@@ -28,6 +28,7 @@ String total_price = (String)request.getAttribute("totalprice");
 %>
 
 <section>
+<div class="wrap">
 <table>
 
 <caption>
@@ -60,7 +61,7 @@ String total_price = (String)request.getAttribute("totalprice");
 <%if (total_price != null)  {%>
 <span>총 매출: \ <%= total_price%></span>
 <%} %>
- 
+</div>
 </section>
 
 <jsp:include page="/main/footer.jsp"></jsp:include>
