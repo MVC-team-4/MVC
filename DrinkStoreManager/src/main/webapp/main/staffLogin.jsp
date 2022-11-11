@@ -19,7 +19,7 @@ main{
             height: 450px;
             border: 1px solid #13406f;
             margin-top: 100px;
-            margin-bottom: 130px;
+            margin-bottom: 200px;
         }
         .log_title{
             text-align: center;

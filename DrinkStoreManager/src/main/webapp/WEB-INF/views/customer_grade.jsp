@@ -1,15 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="customerPage.model.CustomerGrade"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>고객 등급관리</title>
-<%  String path = request.getContextPath();
+<%  
+	String path = request.getContextPath();
 %>
 <link href="<%=path %>/css/section.css" rel= "stylesheet" type="text/css">
 <link href="<%=path %>/css/customergrade.css" rel= "stylesheet" type="text/css">
 </head>
+<%
+	CustomerGrade grade =(CustomerGrade)request.getAttribute("grade");
+%>
+
 <body>
 <jsp:include page="/main/header.jsp"></jsp:include>
 <jsp:include page="/main/nav.jsp"></jsp:include>
@@ -36,7 +42,7 @@
                         <div class="gradename">VVIP</div>
                         <div class="gradecondition">
                             구매금액
-                            <input type="text" class="text" name="vvip" value="1,500,000">이상
+                            <input type="text" class="text" name="vvip" value=<%= grade.getVvip() %>>이상
                         </div>
                         <div class="gradebenefits"> 10% 적립</div>
                     </div>
@@ -45,7 +51,7 @@
                         <div class="gradename">VIP</div>
                         <div class="gradecondition">
                             구매금액
-                            <input type="text" class="text" name="vip" value="1,000,000">이상
+                            <input type="text" class="text" name="vip" value=<%= grade.getVip() %>>이상
                         </div>
                         <div class="gradebenefits"> 5% 적립</div>
                     </div>
@@ -54,7 +60,7 @@
                         <div class="gradename">GOLD</div>
                         <div class="gradecondition">
                             구매금액
-                            <input type="text" class="text" name="gold" value="500,000">이상
+                            <input type="text" class="text" name="gold" value=<%= grade.getGold() %>>이상
                         </div>
                         <div class="gradebenefits"> 3% 적립</div>
                     </div>
