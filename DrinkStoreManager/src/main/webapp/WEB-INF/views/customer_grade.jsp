@@ -8,6 +8,7 @@
 <%  String path = request.getContextPath();
 %>
 <link href="<%=path %>/css/section.css" rel= "stylesheet" type="text/css">
+<link href="<%=path %>/css/customergrade.css" rel= "stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="/main/header.jsp"></jsp:include>

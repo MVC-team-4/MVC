@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.wrap{
+    margin: 0 auto;
+    text-align: center;
+}
+.tr{
+    display: flex;
+}
+
+.table{
+    border: 1px solid black;
+    width: 600px;
+    margin: 0 auto;
+}
+.thead{
+    border-bottom: 1px solid black;
+}
+.gradeName, .gradeCondition{
+    border-right: 1px solid black;
+}
+.gradename, .gradecondition{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.gradebenefits{
+    border-bottom: 1px solid black;
+}
+.gradeName, .gradeCondition, .gradeBenefits{
+    width: 200px;
+    height: 50px;
+}
+.gradename, .gradecondition, .gradebenefits{
+    width: 200px;
+    height: 50px;
+}
+.text{
+    width: 150px;
+}
