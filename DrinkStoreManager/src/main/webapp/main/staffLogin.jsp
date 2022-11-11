@@ -69,9 +69,7 @@ main{
 </style>
 </head>
 <body>
-    <header>
-		<jsp:include page="/main/header.jsp"></jsp:include>
-    </header>
+   
     <section>
 		<main>
 		       <div class="log_title">
