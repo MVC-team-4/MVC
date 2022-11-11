@@ -14,14 +14,14 @@ import customerPage.model.CustomerDao;
 import customerPage.model.CustomerGrade;
 import customerPage.model.CustomerService;
 
-@WebServlet("/Customerupdate")
-public class CustomerupdateServlet extends HttpServlet{
+@WebServlet("/CustomerGrade")
+public class CustomerGradeServlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		//고객 등급관리 화면으로 이동
-		request.getRequestDispatcher("WEB-INF/views/customer_update.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/views/customer_grade.jsp").forward(request, response);
 	}
 	
 	@Override
