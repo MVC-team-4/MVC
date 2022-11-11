@@ -19,36 +19,77 @@
 <section>
     <div class="section1">
         <div class="order-wrap">
-            <ul><p>신규 주문 (11월 10일)</p>
-                <li>1. 조니워커 4병</li>
-                <li>2. 돔페리뇽 2병</li>
-                <li>3. 발렌타인 30년 1병</li>
-            </ul>
+            <h3>신규 주문 (11월 10일)</h3>
+            <table class="new_order">
+            	<thead>
+            		<tr>
+            			<th> No </th>
+            			<th> 상품명 </th>
+            			<th> 갯수 </th>
+            		</tr>
+            	</thead>
+            		<tbody>
+            			<tr>
+            			<td>1</td>
+            			<td>조니워커</td>
+            			<td>4병</td>
+            			</tr>
+            			
+            			<tr>
+            			<td>2</td>
+            			<td>돔페리뇽</td>
+            			<td>2병</td>
+            			</tr>
+            			
+            			<tr>
+            			<td>3</td>
+            			<td>발렌타인 30년</td>
+            			<td>1병</td>
+            			</tr>
+            		</tbody>
+            </table>
         </div>
         <div class="sales-wrap">
+        	<h3>매출 통계</h3>
             <table id="sales-table">
-                <tr>
-                <p class="sales-title">매출 통계</p>
-                    <th>날짜</th>
-                    <th>11.03</th>
-                    <th>11.04</th>
-                    <th>11.05</th>
-                    <th>11.06</th>
-                </tr>
-                <tr>
-                    <td>매출 금액</td>
-                    <td>\1,545,000</td>
-                    <td>\1,359,000</td>
-                    <td>\4,830,000</td>
-                    <td>\1,685,000</td>
-                </tr>
-                <tr >
-                    <td>매출 건수</td>
-                    <td>2 건</td>
-                    <td>3 건</td>
-                    <td>9 건</td>
-                    <td>3 건</td>
-                </tr>
+            	<thead>
+	            	<tr>
+	            		<th>날짜</th>
+	            		<th>매출 금액</th>
+	            		<th>매출 건수</th>
+	            	</tr>
+            	</thead>
+            	<tbody>
+            		<tr>
+            		<td>11월 03일</td>
+            		<td>\1,545,000</td>
+            		<td>2건</td>
+            		</tr>
+            		
+            		<tr>
+            		<td>11월 04일</td>
+            		<td>\1,359,000</td>
+            		<td>3건</td>
+            		</tr>
+            		
+            		<tr>
+            		<td>11월 05일</td>
+            		<td>\4,830,000</td>
+            		<td>9건</td>
+            		</tr>
+            		
+            		<tr>
+            		<td>11월 06일</td>
+            		<td>\1,685,000</td>
+            		<td>3건</td>
+            		</tr>
+            		
+            		<tr>
+            		<td>11월 07일</td>
+            		<td>\748,000</td>
+            		<td>3건</td>
+            		</tr>
+            	</tbody>
             </table>
         </div>
     </div>

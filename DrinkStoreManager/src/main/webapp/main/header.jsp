@@ -23,7 +23,7 @@
             </div>
             <div class="header-info">
                 <div class="manager-id-logo">
-                    id 님
+                    관리자 님
                 </div>
                 <div class="login-logo">
                     <a href="#">로그아웃</a>

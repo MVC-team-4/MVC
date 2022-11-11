@@ -6,9 +6,58 @@ a{
     text-decoration: none;
     color: black;
 }
-ul, li{
-    list-style: none;
+
+table{
+    padding: 10px;
+    margin: 10px auto;
+    border-top: 1px solid lightgray;
+    border-collapse: collapse;
+   
 }
+
+.new_order td, .new_order th {
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    color: #333333;
+    font-size: 0.875em;
+  }
+.new_order tbody tr:nth-child(2n+1){
+    background-color: #f0f0f0;
+}
+
+.new_order th:nth-child(1), .new_order td:nth-child(1){
+    width: 50px;
+}
+.new_order th:nth-child(4), .new_order td:nth-child(4){
+    width: 150px;
+}
+.new_order th:last-child, .new_order td:last-child{
+    padding-right: 10px;
+}
+
+#sales-table td, #sales-table th {
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    color: #333333;
+    font-size: 0.875em;
+  }
+#sales-table tbody tr:nth-child(2n+1){
+    background-color: #f0f0f0;
+}
+
+#sales-table th:nth-child(1), #sales-table td:nth-child(1){
+    width: 100px;
+}
+#sales-table th:nth-child(4), #sales-table td:nth-child(4){
+    width: 150px;
+}
+#sales-table th:last-child, #sales-table td:last-child{
+    padding-right: 10px;
+}
+
+
 section{
     min-width: 1200px;
     min-height: 900px;
