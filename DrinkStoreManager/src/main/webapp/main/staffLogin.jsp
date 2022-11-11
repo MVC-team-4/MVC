@@ -6,6 +6,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+section{
+	width: 800px;
+	margin: 0 auto;
+}
 main{
             display: block;
             justify-content: center;
@@ -59,37 +63,42 @@ main{
             cursor: pointer;
             color:white;
         }
+        #footer{
+        	margin: 0 auto;
+        }
 </style>
 </head>
 <body>
     <header>
 		<jsp:include page="/main/header.jsp"></jsp:include>
     </header>
-	<main>
-	       <div class="log_title">
-	           <a>임직원 로그인</a>
-	       </div>
-	       <%
-			String path =  request.getContextPath();   
-			%>
-	      <form action="<%=path %>/login.do"  method="post">
-	      <div class="login_div">
-	        <div class="login_info">
-	            <label for="id">아이디</label>
-	            <input type="text" name="id" id="id" placeholder="ID">
-	        </div>
-	        <div class="login_info">
-	            <label for="pw">비밀번호</label>
-	            <input type="password" name="pw" id="pw" placeholder="PASSWORD">
-	        </div>
-	        <div class="login_btn">
-	            <button>로그인</button>
-	        </div>
-	      </div>
-	     </form>
-	 </main>
-	<footer>
-	<jsp:include page="/main/footer.jsp"></jsp:include>
+    <section>
+		<main>
+		       <div class="log_title">
+		           <a>임직원 로그인</a>
+		       </div>
+		       <%
+				String path =  request.getContextPath();   
+				%>
+		      <form action="<%=path %>/login.do"  method="post">
+		      <div class="login_div">
+		        <div class="login_info">
+		            <label for="id">아이디</label>
+		            <input type="text" name="id" id="id" placeholder="ID">
+		        </div>
+		        <div class="login_info">
+		            <label for="pw">비밀번호</label>
+		            <input type="password" name="pw" id="pw" placeholder="PASSWORD">
+		        </div>
+		        <div class="login_btn">
+		            <button>로그인</button>
+		        </div>
+		      </div>
+		     </form>
+		 </main>
+    </section>
+	<footer id="footer">
+	<jsp:include page="/main/login_footer.jsp"></jsp:include>
 	</footer>
 </body>
 </html>
