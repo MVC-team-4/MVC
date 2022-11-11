@@ -9,5 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>main.jsp</welcome-file>
+    <welcome-file>staffLogin.jsp</welcome-file>
   </welcome-file-list>
+  
 </web-app>

@@ -8,11 +8,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/login.do")
 public class LoginServlet   extends HttpServlet{
-	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//로그인 화면으로
+		request.getRequestDispatcher("main/staffLogin.jsp").forward(request, response);
+	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,11 +37,12 @@ public class LoginServlet   extends HttpServlet{
 		//로그인
 
 		if(result==1) {
-			PrintWriter out = response.getWriter();
-//			out.println("<script>");
-//			out.println("location.href = '/main/main.jsp'"); // main 페이지로 사용자를 보냄 
-//			out.println("</script>");
-			response.sendRedirect("/DrinkStoreManager/main/main.jsp");
+			//회원인 경우
+			HttpSession session = request.getSession();
+			session.setAttribute("id", id);
+			//request.getRequestDispatcher("main/main.jsp").forward(request, response);
+			response.sendRedirect("/DrinkStoreManager/main");
+			System.out.println(id);
 		}else if(result==0) {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");

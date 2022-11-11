@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
+<% String id = (String)session.getAttribute("id"); %>
 <% String path = request.getContextPath(); %>
 <link href="<%=path %>/css/header.css" rel= "stylesheet" type="text/css">
 
@@ -23,10 +24,10 @@
             </div>
             <div class="header-info">
                 <div class="manager-id-logo">
-                    관리자 님
+                    <%= id %> 님
                 </div>
                 <div class="login-logo">
-                    <a href="/DrinkStoreManager/main/staffLogin.jsp">로그아웃</a>
+                    <a href="/DrinkStoreManager/logout">로그아웃</a>
                 </div>
             </div>
         </div>
