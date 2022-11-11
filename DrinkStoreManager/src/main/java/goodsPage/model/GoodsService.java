@@ -6,6 +6,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import goodsPage.model.GoodsDao;
+import mainPage.model.NewSale;
 
 public class GoodsService {
 	
@@ -118,6 +119,25 @@ public class GoodsService {
 	//상품 삭제 서비스
 	public void deleteGoods(String delete_code) {
 		dao.deleteGoods(delete_code);
+	}
+	
+	//메인용 신규 판매 상품 리스트
+	public String selectNewSaleJson() {
+		ArrayList<NewSale> list = dao.selectNewSaleList();
+		
+		JSONArray jArray = new JSONArray();
+		for(NewSale sale : list) {
+			JSONObject json = new JSONObject();
+			json.put("sale_code", sale.getSale_code());
+			json.put("kind", sale.getKind());
+			json.put("goods_name", sale.getGoods_name());
+			json.put("the_number", sale.getThe_number());
+			jArray.add(json);
+		}
+		JSONObject newSales = new JSONObject();
+		newSales.put("newSales", jArray);
+		
+		return newSales.toString();
 	}
 	
 	//콘솔 테스트

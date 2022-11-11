@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import mainPage.model.NewSale;
+
 
 public class GoodsDao {
 	
@@ -161,80 +163,80 @@ public class GoodsDao {
 		}	
 		return list;		
 	}
-	
+
 	// 물품: 코드정렬
-		public ArrayList<Goods> selectGoodsSortByCode(){
-			ArrayList<Goods> list = new ArrayList<>();
-			dbCon();
-			String sql ="SELECT * FROM goods_list ORDER BY goods_code ";
-			try {
-				Statement st  = con.createStatement();
-				ResultSet rs = st.executeQuery(sql);
+	public ArrayList<Goods> selectGoodsSortByCode(){
+		ArrayList<Goods> list = new ArrayList<>();
+		dbCon();
+		String sql ="SELECT * FROM goods_list ORDER BY goods_code ";
+		try {
+			Statement st  = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
 
-				while( rs.next()) {
+			while( rs.next()) {
 
-					String goods_code = rs.getString(1);
-					String goods_name = rs.getString(2);
-					String kind = rs.getString(3);
-					String goods_price = rs.getString(4);
-					String goods_stock = rs.getString(5);
+				String goods_code = rs.getString(1);
+				String goods_name = rs.getString(2);
+				String kind = rs.getString(3);
+				String goods_price = rs.getString(4);
+				String goods_stock = rs.getString(5);
 
-					Goods g = new Goods();
-					g.setGoods_code(goods_code);
-					g.setGoods_name(goods_name);
-					g.setKind(kind);
-					g.setGoods_price(goods_price);
-					g.setGoods_stock(goods_stock);
+				Goods g = new Goods();
+				g.setGoods_code(goods_code);
+				g.setGoods_name(goods_name);
+				g.setKind(kind);
+				g.setGoods_price(goods_price);
+				g.setGoods_stock(goods_stock);
 
-					list.add(g);
-				}
-
-				rs.close();
-				st.close();
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}	
-			return list;		
-		}
-		
-	// 물품: 수량정렬
-			public ArrayList<Goods> selectGoodsSortByStock(){
-				ArrayList<Goods> list = new ArrayList<>();
-				dbCon();
-				String sql ="SELECT * FROM goods_list ORDER BY goods_stock DESC ";
-				try {
-					Statement st  = con.createStatement();
-					ResultSet rs = st.executeQuery(sql);
-
-					while( rs.next()) {
-
-						String goods_code = rs.getString(1);
-						String goods_name = rs.getString(2);
-						String kind = rs.getString(3);
-						String goods_price = rs.getString(4);
-						String goods_stock = rs.getString(5);
-
-						Goods g = new Goods();
-						g.setGoods_code(goods_code);
-						g.setGoods_name(goods_name);
-						g.setKind(kind);
-						g.setGoods_price(goods_price);
-						g.setGoods_stock(goods_stock);
-
-						list.add(g);
-					}
-
-					rs.close();
-					st.close();
-					con.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}	
-				return list;		
+				list.add(g);
 			}
-			
-	
+
+			rs.close();
+			st.close();
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+		return list;		
+	}
+
+	// 물품: 수량정렬
+	public ArrayList<Goods> selectGoodsSortByStock(){
+		ArrayList<Goods> list = new ArrayList<>();
+		dbCon();
+		String sql ="SELECT * FROM goods_list ORDER BY goods_stock DESC ";
+		try {
+			Statement st  = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+
+			while( rs.next()) {
+
+				String goods_code = rs.getString(1);
+				String goods_name = rs.getString(2);
+				String kind = rs.getString(3);
+				String goods_price = rs.getString(4);
+				String goods_stock = rs.getString(5);
+
+				Goods g = new Goods();
+				g.setGoods_code(goods_code);
+				g.setGoods_name(goods_name);
+				g.setKind(kind);
+				g.setGoods_price(goods_price);
+				g.setGoods_stock(goods_stock);
+
+				list.add(g);
+			}
+
+			rs.close();
+			st.close();
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+		return list;		
+	}
+
+
 	//상품 데이터 수정
 	public void updateGoods(Goods updateGoods){
 		dbCon();
@@ -270,12 +272,50 @@ public class GoodsDao {
 			e.printStackTrace();
 		}
 	}
+	
+	//메인용 신규 판매 상품 리스트
+	public ArrayList<NewSale> selectNewSaleList() {
+		ArrayList<NewSale> list = new ArrayList<>();
+		dbCon();
+		String sql ="SELECT * FROM( "
+				+ "SELECT s.sale_code,g.kind, g.goods_name, s.tne_number "
+				+ "FROM sale_list s "
+				+ "JOIN goods_list g "
+				+ "ON s.goods_code=g.goods_code "
+				+ "ORDER BY s.sale_code DESC "
+				+ ") "
+				+ " WHERE ROWNUM <= 10";
+		try {
+			PreparedStatement pst = con.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			while( rs.next()) {
+				String sale_code = rs.getString(1);
+				String kind = rs.getString(2);
+				String goods_name = rs.getString(3);
+				String the_number = rs.getString(4);
+
+				NewSale newSale = new NewSale(sale_code, kind, goods_name, the_number);
+
+				list.add(newSale);
+			}
+
+			rs.close();
+			pst.close();
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+		return list;		
+	}//
+	
 
 	//콘솔 테스트
 	public static void main(String[] args) {
 		GoodsDao dao = new GoodsDao();
 		dao.dbCon();
 		System.out.println(dao.selectOneGoods("00000001"));
+		ArrayList<NewSale> list = dao.selectNewSaleList();
+		System.out.println(list.get(0));
 	}
 
 }
