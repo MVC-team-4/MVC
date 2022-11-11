@@ -13,19 +13,25 @@ main{
             margin: 0 auto;
             width: 450px;
             height: 450px;
-            background-color: #eee;
+            border: 1px solid #13406f;
             margin-top: 100px;
             margin-bottom: 130px;
         }
         .log_title{
             text-align: center;
-            font-size: 30px;
+            font-size: 28px;
             padding-top: 30px;
             padding-bottom: 65px;
+        }
+         .log_title a{
+        	color:#13406f;
         }
         .login_info{
             margin: 0 auto;
             width: 300px;
+        }
+         .login_info label{
+        	color:#13406f;
         }
         .login_info input{
             width: 100%;
@@ -33,8 +39,8 @@ main{
             padding: 15px 10px 10px;
             background-color: transparent;
             border: none;
-            border-bottom: 0.5px solid #c50000;
-            font-size: 20px;
+            border-bottom: 0.5px solid #00c73c;
+            font-size: 17px;
             outline: none;
 
         }
@@ -46,17 +52,18 @@ main{
             margin: 0 auto;
             width: 300px;
             height: 40px;
-            background-color: #c50000;
+            background-color:#00c73c;
             font-size: 25px;
             border: none;
-            border-radius: 15px;
+            border-radius: 5px;
             cursor: pointer;
+            color:white;
         }
 </style>
 </head>
 <body>
     <header>
-		<jsp:include page="/main/Loginheader.jsp"></jsp:include>
+		<jsp:include page="/main/header.jsp"></jsp:include>
     </header>
 	<main>
 	       <div class="log_title">
