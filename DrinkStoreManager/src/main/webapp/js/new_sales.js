@@ -2,7 +2,7 @@
  * 
  */
  function sales(){
-        alert("load 완료");
+        //alert("load 완료");
         $.ajax(
             {
                 type:"post",
