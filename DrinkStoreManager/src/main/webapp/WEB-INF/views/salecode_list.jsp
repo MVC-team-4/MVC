@@ -27,6 +27,7 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 %>
 
 <section>
+<div class="wrap">
 <table>
 
 <caption>
@@ -55,6 +56,7 @@ ArrayList<Sale> list = (ArrayList<Sale>)request.getAttribute("list");
 </tr>
 <%} %>
 </table>
+</div>
 </section>
 <jsp:include page="/main/footer.jsp"></jsp:include>
 </body>
