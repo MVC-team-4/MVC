@@ -47,7 +47,7 @@ public class GoodsUpdateServlet extends HttpServlet {
 		service.updateGoods(goods);
 
 		//조회 서블릿으로 요청
-		response.sendRedirect("/DrinkStoreManager/goods-list.do");
+		response.sendRedirect("/DrinkStoreManager/Customerlist");
 	}
 	
 }

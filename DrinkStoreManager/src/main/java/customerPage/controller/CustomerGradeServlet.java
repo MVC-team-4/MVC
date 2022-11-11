@@ -38,19 +38,16 @@ public class CustomerGradeServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//form 데이터 받아오기
 		CustomerGradeDao service = new CustomerGradeDao();
-		CustomerGrade grade = service.selectGrade();
-		
 		//수정 서비스
-		System.out.println("탔나?");
 		request.setCharacterEncoding("UTF-8");
 		String vvip = request.getParameter("vvip");
 		String vip = request.getParameter("vip");
 		String gold = request.getParameter("gold");
-		grade = new CustomerGrade(vvip, vip, gold);
+		CustomerGrade grade = new CustomerGrade(vvip, vip, gold);
+		service.updateGrade(grade);
 		System.out.println(grade);
 		
-		request.setAttribute("grade", grade);
 		//상품 조회 화면으로 이동
-		request.getRequestDispatcher("WEB-INF/views/customer_grade.jsp").forward(request, response);
+		response.sendRedirect("/DrinkStoreManager/Customerlist");
 	}
 }
