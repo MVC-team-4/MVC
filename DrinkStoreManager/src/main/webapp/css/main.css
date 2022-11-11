@@ -48,7 +48,7 @@ table{
 }
 
 #sales-table th:nth-child(1), #sales-table td:nth-child(1){
-    width: 100px;
+    width: 200px;
 }
 #sales-table th:nth-child(4), #sales-table td:nth-child(4){
     width: 150px;
