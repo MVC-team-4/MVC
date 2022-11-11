@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="customerPage.model.CustomerGrade"%>
+<%@page import="customerPage.model.CustomerGradeDao"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,7 +79,14 @@
 					 <button>저장</button>
         </div>
         
+        <% 	
+	        CustomerGradeDao service = new CustomerGradeDao();
+	        service.updateGrade(grade); 
+	    %>
+        
     </form>
+    
+    
 </section>
 
 <jsp:include page="/main/footer.jsp"></jsp:include>

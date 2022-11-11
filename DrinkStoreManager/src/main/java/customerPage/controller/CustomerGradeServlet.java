@@ -49,7 +49,6 @@ public class CustomerGradeServlet extends HttpServlet{
 		grade = new CustomerGrade(vvip, vip, gold);
 		System.out.println(grade);
 		
-		service.updateGrade(grade);;
 		
 		request.setAttribute("grade", grade);
 		//상품 조회 화면으로 이동
